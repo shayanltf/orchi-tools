@@ -9,7 +9,7 @@ claude plugin install apple-skills@orchi-tools
 
 Skills live in root `skills/` per Claude plugin structure. Invoke as `/apple-skills:<skill-name>`.
 
-Maintainer-only smoke test from a checkout:
+For maintainer validation from a checkout:
 
 ```bash
 claude --plugin-dir .

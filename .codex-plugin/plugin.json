@@ -1,7 +1,7 @@
 {
   "name": "apple-skills",
   "version": "0.1.0",
-  "description": "Centralized Apple ecosystem agent skills for Claude Code and Codex.",
+  "description": "Apple ecosystem skills for Claude Code and Codex, sourced from OpenAI's iOS and macOS plugin examples.",
   "author": {
     "name": "Apple Skills contributors"
   },
@@ -11,27 +11,37 @@
     "swift",
     "ios",
     "macos",
+    "swiftui",
+    "appkit",
+    "xcode",
     "claude-code",
     "codex",
     "skills",
     "plugins"
   ],
   "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Apple Skills",
-    "shortDescription": "Apple ecosystem skills for Claude Code and Codex.",
-    "longDescription": "Centralized Apple ecosystem agent skills for SwiftUI, Swift Concurrency, Swift Testing, SwiftData, Core Data, Xcode build optimization, iOS debugging, macOS packaging, and App Store release work.",
+    "shortDescription": "OpenAI-sourced iOS and macOS skills for Claude Code and Codex.",
+    "longDescription": "Apple Skills packages OpenAI's Build iOS Apps and Build macOS Apps skill workflows for App Intents, SwiftUI UI work, iOS simulator debugging, ETTrace profiling, memgraph leak checks, macOS SwiftUI and AppKit work, SwiftPM, signing, notarization, logging, test triage, and window management.",
     "developerName": "Apple Skills contributors",
     "category": "Productivity",
     "capabilities": [
       "Context",
-      "Skills"
+      "Skills",
+      "Interactive",
+      "Read",
+      "Write"
     ],
     "defaultPrompt": [
-      "Use Apple Skills for this Swift task.",
-      "Review this iOS feature with Apple Skills.",
-      "Optimize this Xcode build."
+      "Use Apple Skills to refine this SwiftUI feature.",
+      "Use Apple Skills to debug this iOS simulator issue.",
+      "Use Apple Skills to inspect this macOS app."
     ],
-    "brandColor": "#0A84FF"
+    "brandColor": "#0A84FF",
+    "composerIcon": "./assets/build-ios-apps-small.svg",
+    "logo": "./assets/app-icon.png",
+    "websiteURL": "https://github.com/shayanltf/orchi-tools"
   }
 }

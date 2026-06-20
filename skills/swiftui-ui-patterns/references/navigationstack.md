@@ -7,7 +7,7 @@ Use this pattern for programmatic navigation and deep links, especially when eac
 ## Core architecture
 
 - Define a route enum that is `Hashable` and represents all destinations.
-- Create a lightweight router (or an existing project router library) that owns the `path` and any sheet state.
+- Create a lightweight router that owns the `path` and any sheet state.
 - Each tab owns its own router instance and binds `NavigationStack(path:)` to it.
 - Inject the router into the environment so child views can navigate programmatically.
 - Centralize destination mapping with a single `navigationDestination(for:)` block (or a `withAppRouter()` modifier).

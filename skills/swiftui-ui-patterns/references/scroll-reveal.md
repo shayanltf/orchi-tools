@@ -126,8 +126,3 @@ This keeps the motion coherent and avoids duplicate-hit-target bugs.
 - Do not mix multiple animation sources for the same property. If `progress` drives it, keep other animations off that property.
 - Do not store derived state like `isSecondaryVisible` unless another API requires it. Prefer deriving it from `progress` or visible scroll targets.
 - Beware of layout feedback loops when measuring heights. Clamp zero values and update only when the measured height actually changes.
-
-## Concrete example
-
-- Primary detail screen reveal: use the screen that owns the scroll state and hero content.
-- Secondary content anchor example: use the nested detail section that becomes visible after reveal progress crosses the threshold.

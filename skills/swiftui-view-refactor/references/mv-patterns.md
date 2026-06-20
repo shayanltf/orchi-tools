@@ -2,7 +2,7 @@
 
 Distilled guidance for deciding whether a SwiftUI feature should stay as plain MV or introduce a view model.
 
-Use this as a practical refactoring reference for MV-first SwiftUI decisions.
+Use this as a practical refactoring reference for choosing plain MV structure or a narrow view-model layer.
 
 ## Default stance
 

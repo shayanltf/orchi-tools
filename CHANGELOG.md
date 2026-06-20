@@ -2,6 +2,7 @@
 
 ## [0.1.0] - 2026-06-20
 
-- Added initial Apple Skills plugin manifests, imported Apple ecosystem skills, workflow docs, reusable context, research files, and third-party license notices.
-- Added Claude and Codex marketplace manifests so users install through their harness instead of cloning into each project.
-- Removed personal local path residue from copied SwiftUI pattern context.
+- Added Apple Skills plugin manifests for Claude Code and Codex.
+- Replaced the initial broad third-party import set with OpenAI-sourced Apple skills from `openai/plugins`.
+- Added XcodeBuildMCP config, macOS helper commands, reusable docs context, and OpenAI-only research files.
+- Kept marketplace install guidance harness-first with no version refs in public install commands.
