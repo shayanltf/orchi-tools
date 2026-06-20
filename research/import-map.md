@@ -1,36 +1,37 @@
 # Import Map
 
-Use when tracing skill destination to public source.
+Use when tracing repo skill destination to OpenAI source path.
 
-## SwiftUI
+## iOS From `plugins/build-ios-apps/skills`
 
-- `swiftui-pro` <- `twostraws/SwiftUI-Agent-Skill`
-- `swiftui-expert` <- `AvdLee/SwiftUI-Agent-Skill`
-- `swiftui-api-refresh` <- `AvdLee/SwiftUI-Agent-Skill` repo-scoped helper skill
-- `swiftui-ui-patterns` <- `Dimillian/Skills`
-- `swiftui-liquid-glass` <- `Dimillian/Skills`
-- `swiftui-performance-audit` <- `Dimillian/Skills`
-- `swiftui-view-refactor` <- `Dimillian/Skills`
+- `ios-app-intents` <- `plugins/build-ios-apps/skills/ios-app-intents`
+- `ios-debugger-agent` <- `plugins/build-ios-apps/skills/ios-debugger-agent`
+- `ios-ettrace-performance` <- `plugins/build-ios-apps/skills/ios-ettrace-performance`
+- `ios-memgraph-leaks` <- `plugins/build-ios-apps/skills/ios-memgraph-leaks`
+- `ios-simulator-browser` <- `plugins/build-ios-apps/skills/ios-simulator-browser`
+- `swiftui-liquid-glass` <- `plugins/build-ios-apps/skills/swiftui-liquid-glass`
+- `swiftui-performance-audit` <- `plugins/build-ios-apps/skills/swiftui-performance-audit`
+- `swiftui-ui-patterns` <- `plugins/build-ios-apps/skills/swiftui-ui-patterns`
+- `swiftui-view-refactor` <- `plugins/build-ios-apps/skills/swiftui-view-refactor`
 
-## Swift Language, Tests, Persistence
+## macOS From `plugins/build-macos-apps/skills`
 
-- `swift-concurrency-pro` <- `twostraws/Swift-Concurrency-Agent-Skill`
-- `swift-concurrency` <- `AvdLee/Swift-Concurrency-Agent-Skill`
-- `swift-concurrency-expert` <- `Dimillian/Skills`
-- `swift-testing-pro` <- `twostraws/Swift-Testing-Agent-Skill`
-- `swift-testing-expert` <- `AvdLee/Swift-Testing-Agent-Skill`
-- `swiftdata-pro` <- `twostraws/SwiftData-Agent-Skill`
-- `core-data` <- `AvdLee/Core-Data-Agent-Skill`
+- `appkit-interop` <- `plugins/build-macos-apps/skills/appkit-interop`
+- `build-run-debug` <- `plugins/build-macos-apps/skills/build-run-debug`
+- `liquid-glass` <- `plugins/build-macos-apps/skills/liquid-glass`
+- `packaging-notarization` <- `plugins/build-macos-apps/skills/packaging-notarization`
+- `signing-entitlements` <- `plugins/build-macos-apps/skills/signing-entitlements`
+- `swiftpm-macos` <- `plugins/build-macos-apps/skills/swiftpm-macos`
+- `swiftui-patterns` <- `plugins/build-macos-apps/skills/swiftui-patterns`
+- `telemetry` <- `plugins/build-macos-apps/skills/telemetry`
+- `test-triage` <- `plugins/build-macos-apps/skills/test-triage`
+- `view-refactor` <- `plugins/build-macos-apps/skills/view-refactor`
+- `window-management` <- `plugins/build-macos-apps/skills/window-management`
 
-## Build, Debug, Release
+## Root Support Files
 
-- `xcode-build-orchestrator` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `xcode-build-benchmark` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `xcode-build-fixer` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `xcode-compilation-analyzer` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `xcode-project-analyzer` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `spm-build-analysis` <- `AvdLee/Xcode-Build-Optimization-Agent-Skill`
-- `ios-debugger-agent` <- `Dimillian/Skills`
-- `macos-menubar-tuist-app` <- `Dimillian/Skills`
-- `macos-spm-app-packaging` <- `Dimillian/Skills`
-- `app-store-changelog` <- `Dimillian/Skills`
+- `.mcp.json` <- `plugins/build-ios-apps/.mcp.json`
+- `commands/` <- `plugins/build-macos-apps/commands`
+- `assets/build-ios-apps-small.svg` <- `plugins/build-ios-apps/assets/build-ios-apps-small.svg`
+- `assets/build-macos-apps-small.svg` <- `plugins/build-macos-apps/assets/build-macos-apps-small.svg`
+- `assets/app-icon.png` <- `plugins/build-ios-apps/assets/app-icon.png`

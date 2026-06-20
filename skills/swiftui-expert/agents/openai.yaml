@@ -1,4 +1,0 @@
-interface:
-  display_name: "SwiftUI Expert"
-  short_description: "Deep SwiftUI state and view guidance"
-  default_prompt: "Use $swiftui-expert to review SwiftUI state, view composition, and invalidation in this code."

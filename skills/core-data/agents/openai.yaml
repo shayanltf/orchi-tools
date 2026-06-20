@@ -1,4 +1,0 @@
-interface:
-  display_name: "Core Data"
-  short_description: "Build and review Core Data stacks"
-  default_prompt: "Use $core-data to set up, review, or fix a Core Data stack, fetches, threading, or migration."

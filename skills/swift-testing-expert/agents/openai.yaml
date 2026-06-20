@@ -1,4 +1,0 @@
-interface:
-  display_name: "Swift Testing Expert"
-  short_description: "Write and migrate Swift Testing suites"
-  default_prompt: "Use $swift-testing-expert to write Swift Testing tests or migrate this suite from XCTest."

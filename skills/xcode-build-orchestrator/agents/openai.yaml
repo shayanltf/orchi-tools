@@ -1,4 +1,0 @@
-interface:
-  display_name: "Xcode Build Orchestrator"
-  short_description: "Run end-to-end Xcode build optimization"
-  default_prompt: "Use $xcode-build-orchestrator to run a full benchmark-first Xcode build optimization pass."

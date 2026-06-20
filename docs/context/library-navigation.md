@@ -1,26 +1,24 @@
 # Library Navigation
 
-Use when choosing Apple Skills entrypoint.
+Use when choosing an Apple Skills entrypoint.
 
-- SwiftUI broad review -> `swiftui-pro` or `swiftui-expert`.
-- SwiftUI components/navigation/layout -> `swiftui-ui-patterns`.
-- SwiftUI glass API -> `swiftui-liquid-glass`.
-- SwiftUI perf -> `swiftui-performance-audit`.
-- SwiftUI cleanup -> `swiftui-view-refactor`.
-- SwiftUI API deprecation scan -> `swiftui-api-refresh`.
-- Concurrency broad review -> `swift-concurrency-pro`.
-- Swift 6 diagnostics/migration -> `swift-concurrency`.
-- Swift 6.2 remediation -> `swift-concurrency-expert`.
-- Tests -> `swift-testing-pro` or `swift-testing-expert`.
-- SwiftData -> `swiftdata-pro`.
-- Core Data -> `core-data`.
-- Xcode build full workflow -> `xcode-build-orchestrator`.
-- Xcode build baseline -> `xcode-build-benchmark`.
-- Approved build fixes -> `xcode-build-fixer`.
-- Compile hotspots -> `xcode-compilation-analyzer`.
-- Project settings -> `xcode-project-analyzer`.
-- SPM graph/packages -> `spm-build-analysis`.
-- iOS simulator debug -> `ios-debugger-agent`.
-- macOS menubar Tuist app -> `macos-menubar-tuist-app`.
-- macOS SwiftPM packaging -> `macos-spm-app-packaging`.
-- App Store release notes -> `app-store-changelog`.
+- App Intents/system surfaces -> `ios-app-intents`.
+- iOS simulator build/run/debug -> `ios-debugger-agent`.
+- iOS ETTrace profiling -> `ios-ettrace-performance`.
+- iOS memgraph leaks -> `ios-memgraph-leaks`.
+- Simulator mirror or SwiftUI preview browser -> `ios-simulator-browser`.
+- iOS SwiftUI Liquid Glass -> `swiftui-liquid-glass`.
+- SwiftUI runtime performance -> `swiftui-performance-audit`.
+- SwiftUI iOS UI patterns -> `swiftui-ui-patterns`.
+- SwiftUI iOS view cleanup -> `swiftui-view-refactor`.
+- AppKit bridge -> `appkit-interop`.
+- macOS build/run/debug -> `build-run-debug`.
+- macOS Liquid Glass -> `liquid-glass`.
+- macOS packaging/notarization -> `packaging-notarization`.
+- macOS signing/entitlements -> `signing-entitlements`.
+- SwiftPM macOS app/package -> `swiftpm-macos`.
+- macOS SwiftUI scenes/menus/settings/windows -> `swiftui-patterns`.
+- macOS Logger telemetry -> `telemetry`.
+- macOS test failure triage -> `test-triage`.
+- macOS scene/view cleanup -> `view-refactor`.
+- macOS window behavior -> `window-management`.

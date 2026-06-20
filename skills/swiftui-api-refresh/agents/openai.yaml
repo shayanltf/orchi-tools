@@ -1,4 +1,0 @@
-interface:
-  display_name: "SwiftUI API Refresh"
-  short_description: "Refresh SwiftUI APIs from Apple docs"
-  default_prompt: "Use $swiftui-api-refresh to scan official Apple docs and update deprecated SwiftUI APIs."

@@ -47,5 +47,5 @@ struct ConversationView: View {
 
 ## Pitfalls
 
-- Avoid placing the input view inside the scroll stack; it will jump with content.
+- Avoid placing the input view inside the scroll stack; it moves with content.
 - Avoid nested scroll views that fight for drag gestures.

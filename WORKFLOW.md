@@ -1,17 +1,29 @@
 # Workflow
 
-Use this file when managing imports, `docs/`, `research/`, releases, or future skill updates.
+Use this file when managing source imports, `docs/`, `research/`, releases, or future skill updates.
 
-## Import Rule
+## Source Rule
 
-Cloning alone is not enough. Clone/import source skills, then curate:
+Current allowed copied source: OpenAI official plugin examples only.
 
-- New name by purpose/scope, not source branding.
-- Clear boundary: one skill, one job.
-- Group/order by user workflow: SwiftUI, Swift language/tests/persistence, build/debug/release.
-- Preserve useful skill body content. Change packaging/frontmatter only when needed for clean access, privacy, license, or folder-name alignment.
-- Move source refs, mentions, author attribution, and license notes to `README.md` and `licenses/`.
-- Never import content from proprietary or unlicensed sources; keep those as research references only.
+- Import Apple-related skills from `https://github.com/openai/plugins`.
+- Use `plugins/build-ios-apps` and `plugins/build-macos-apps` for the current library.
+- Preserve OpenAI skill structure: `SKILL.md`, `references/`, `scripts/`, `agents/openai.yaml`.
+- Preserve helper plugin surfaces when they support copied skills: `.mcp.json`, `commands/`, and required assets.
+- Attribute OpenAI in README and research.
+- Remove stale source refs from README, docs, research, and skill bodies.
+- Do not keep references to researched-but-unused sources.
+- Do not copy content from proprietary, unavailable, personal, or unapproved sources.
+
+## Naming And Grouping
+
+Cloning alone is not enough. Import source skills, then curate access:
+
+- Name by purpose and scope, not source branding.
+- Keep one skill focused on one job.
+- Group by user workflow: iOS, macOS, shared SwiftUI where applicable.
+- Do not prefix skill names with `apple-skills`.
+- Preserve skill body content unless privacy, stale source refs, broken paths, packaging, or style rules require edits.
 
 ## Docs Directory
 
@@ -29,11 +41,11 @@ Rules:
 - Keep line short, specific, task-routable.
 - Update leaf line when file meaning changes.
 - Do not turn docs into task logs.
-- Do not copy every setup-context file from outside sources.
+- Do not copy setup-context files from outside sources.
 
 ## Writing Style
 
-Apply to README, WORKFLOW, docs, and skill-facing instructions:
+Apply to README, WORKFLOW, docs, and skill-facing instructions where edits are necessary:
 
 - Use imperative instructions: `Run`, `Configure`, `Install`.
 - Use present tense: `This plugin provides`; avoid future tense.
@@ -52,37 +64,36 @@ Apply to README, WORKFLOW, docs, and skill-facing instructions:
 
 ## `docs/context/`
 
-Use for reusable high-fidelity context future agents should load again.
+Use for reusable repo context future agents should load again.
 
 Admit only:
 
-- Stable best practices.
 - Repo rules.
-- Skill import policy.
+- Current source policy.
 - Plugin packaging guidance.
-- Library navigation guidance.
-- Privacy/license/release guardrails.
+- Skill navigation guidance.
+- Docs/research rules.
+- Validation and release guardrails.
 
 Reject:
 
 - One-run notes.
 - Long source dumps.
 - Private source names.
-- Scratch research.
+- Researched-but-unused public source lists.
 - Anything better stored in README, WORKFLOW, or research.
 
 Write caveman-compressed: fewer words, no filler, exact identifiers stay.
 
 ## `research/`
 
-Use for durable long-term research findings from internet, public repos, official docs, and squad research.
+Use for durable source and official-docs findings that belong to this repo.
 
 Admit only:
 
-- Source inventory.
-- License/copy decision.
-- Import map.
-- Official docs map.
+- Active source inventory.
+- Import map from active source paths to repo paths.
+- Official docs map for plugin runtimes and Apple scopes.
 - Long-term findings worth re-reading.
 
 Reject:
@@ -90,6 +101,7 @@ Reject:
 - Raw browsing noise.
 - Temporary command output.
 - Unverified claims.
+- Unused source lists.
 - Private source names.
 
 Write caveman-compressed. Preserve exact links.
@@ -97,8 +109,8 @@ Write caveman-compressed. Preserve exact links.
 ## Squads
 
 - Planning Squad: source evaluation, scope map, import decision, docs/research policy.
-- Implementation Squad: skill import, naming, grouping, manifests, repo structure.
-- Review Squad: credential scan, personal leak scan, license risk, public-source isolation.
+- Implementation Squad: skill import, grouping, manifests, repo structure.
+- Review Squad: credential scan, personal leak scan, license risk, source isolation.
 
 Do not merge until review checks copied skill content, README attribution, manifests, `docs/`, `research/`, and tag/version alignment.
 

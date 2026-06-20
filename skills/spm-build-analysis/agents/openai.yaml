@@ -1,4 +1,0 @@
-interface:
-  display_name: "SPM Build Analysis"
-  short_description: "Analyze SwiftPM dependency and build graph"
-  default_prompt: "Use $spm-build-analysis to analyze this Swift package's dependency and build graph for slow points."

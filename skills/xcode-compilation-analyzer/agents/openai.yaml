@@ -1,4 +1,0 @@
-interface:
-  display_name: "Xcode Compilation Analyzer"
-  short_description: "Find Swift compile hotspots"
-  default_prompt: "Use $xcode-compilation-analyzer to find slow-to-compile Swift code in this project."

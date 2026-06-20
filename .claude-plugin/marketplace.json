@@ -8,7 +8,7 @@
     {
       "name": "apple-skills",
       "displayName": "Apple Skills",
-      "description": "Centralized Apple ecosystem agent skills for Claude Code and Codex.",
+      "description": "OpenAI-sourced iOS and macOS skills for Claude Code and Codex.",
       "version": "0.1.0",
       "source": {
         "source": "github",
@@ -24,6 +24,9 @@
         "swift",
         "ios",
         "macos",
+        "swiftui",
+        "appkit",
+        "xcode",
         "skills"
       ]
     }

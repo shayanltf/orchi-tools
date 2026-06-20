@@ -2,13 +2,14 @@
 
 Use when updating `docs/` or `research/`.
 
-- `docs/INDEX.md` maps durable context and research files.
-- `docs/context/` stores reusable best practices and repo rules.
-- `research/` stores durable findings from internet, public repos, official docs, and squad research.
+- `docs/INDEX.md` maps durable repo context and research files.
+- `docs/context/` stores reusable repo rules.
+- `research/` stores active source and official-doc findings.
 - Both use caveman-compressed style: no filler, exact links, exact identifiers.
 - Context is not scratchpad.
 - Research is not raw browsing dump.
-- README carries source refs, mentions, attribution.
+- README carries source attribution.
 - WORKFLOW carries process rules.
 - Changelog carries release history.
 - Issue comments carry task history.
+- Do not store researched-but-unused source lists.

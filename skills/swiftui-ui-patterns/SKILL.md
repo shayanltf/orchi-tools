@@ -1,6 +1,6 @@
 ---
 name: swiftui-ui-patterns
-description: Best practices and example-driven guidance for building SwiftUI views and components, including navigation hierarchies, custom view modifiers, and responsive layouts with stacks and grids. Use when creating or refactoring SwiftUI UI, designing tab architecture with TabView, composing screens with VStack/HStack, managing @State or @Binding, building declarative iOS interfaces, or needing component-specific patterns and examples.
+description: Build and refactor SwiftUI UI with component patterns and examples. Use when shaping navigation, state, layouts, controls, or screen composition.
 ---
 
 # SwiftUI UI Patterns
@@ -55,6 +55,7 @@ Choose the ownership location first, then pick the wrapper. Do not introduce a r
 
 ## Cross-cutting references
 
+- In addition to the references below, use web search to consult current Apple Developer documentation when SwiftUI APIs, availability, or platform guidance may have changed.
 - `references/navigationstack.md`: navigation ownership, per-tab history, and enum routing.
 - `references/sheets.md`: centralized modal presentation and enum-driven sheets.
 - `references/deeplinks.md`: URL handling and routing external links into app destinations.
@@ -78,7 +79,7 @@ Choose the ownership location first, then pick the wrapper. Do not introduce a r
 3. Sketch the view hierarchy, routing model, and presentation points; extract repeated parts into subviews. For complex navigation, read `references/navigationstack.md`, `references/sheets.md`, or `references/deeplinks.md`. **Build and verify no compiler errors before proceeding.**
 4. Implement async loading with `.task` or `.task(id:)`, plus explicit loading and error states when needed. Read `references/async-state.md` when the work depends on changing inputs or cancellation.
 5. Add previews for the primary and secondary states, then add accessibility labels or identifiers when the UI is interactive. Read `references/previews.md` when the view needs fixtures or injected mock dependencies.
-6. Validate with a build: confirm no compiler errors, check that previews render without crashing, ensure state changes propagate correctly, and sanity-check that list identity and observation scope do not cause avoidable re-renders. Read `references/performance.md` if the screen is large, scroll-heavy, or frequently updated. For common SwiftUI compilation errors — missing `@State` annotations, ambiguous `ViewBuilder` closures, or mismatched generic types — resolve them before updating callsites. **If the build fails:** read the error message carefully, fix the identified issue, then rebuild before proceeding to the next step. If a preview crashes, isolate the offending subview, confirm its state initialisation is valid, and re-run the preview before continuing.
+6. Validate with a build: confirm no compiler errors, check that previews render without crashing, ensure state changes propagate correctly, and sanity-check that list identity and observation scope do not cause avoidable re-renders. Read `references/performance.md` if the screen is large, scroll-heavy, or frequently updated. For common SwiftUI compilation errors, including missing `@State` annotations, ambiguous `ViewBuilder` closures, or mismatched generic types, resolve them before updating callsites. **If the build fails:** read the error message carefully, fix the identified issue, then rebuild before proceeding to the next step. If a preview crashes, isolate the offending subview, confirm its state initialisation is valid, and re-run the preview before continuing.
 
 ## Component references
 

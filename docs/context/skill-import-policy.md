@@ -2,13 +2,13 @@
 
 Use before adding, renaming, or removing skills.
 
-- Research first: source repo, license, official docs, scope overlap.
-- Import only copy-safe content.
-- MIT source -> copy skill, preserve license in `licenses/`, attribute in README.
-- No license/proprietary -> research only, no body copy.
-- New skill folder name comes from scope, not source brand.
-- Change frontmatter `name` when folder name changes.
-- Preserve body content unless privacy, broken path, packaging, or name alignment requires edit.
-- Remove source author mentions from skill bodies when attribution belongs in README.
-- Keep imported scripts/references/assets with their skill when they are part of workflow.
-- Search for secrets, tokens, private repo names, private paths after import.
+- Current copied source allowlist: `https://github.com/openai/plugins`.
+- Current source paths: `plugins/build-ios-apps`, `plugins/build-macos-apps`.
+- Import Apple-related skill directories only.
+- Preserve `SKILL.md`, `references/`, `scripts/`, and `agents/openai.yaml`.
+- Preserve supporting root files when skills require them: `.mcp.json`, `commands/`, assets.
+- Keep skill folder names purpose-scoped.
+- Remove unused source references from README, docs, research, and copied skill bodies.
+- Attribute OpenAI in README and research.
+- Do not keep license files or attribution for sources not copied.
+- Search for secrets, tokens, private repo names, private paths, and stale source names after import.

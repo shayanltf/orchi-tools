@@ -1,4 +1,0 @@
-interface:
-  display_name: "Xcode Project Analyzer"
-  short_description: "Audit Xcode project settings"
-  default_prompt: "Use $xcode-project-analyzer to audit this Xcode project's targets, schemes, and build settings."
