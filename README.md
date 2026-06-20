@@ -28,7 +28,20 @@ Use $performance to investigate this memory growth.
 
 ### Claude Code
 
-Claude Code uses its runtime-specific plugin manifest and guidance under `.claude-plugin/` and `claude/`.
+```bash
+claude plugin marketplace add shayanltf/orchi-tools
+claude plugin install apple@orchi-tools
+```
+
+Invoke the grouped skills by namespace:
+
+```text
+/apple:swiftui
+/apple:ios
+/apple:macos
+/apple:build
+/apple:performance
+```
 
 ## Skill Library
 
@@ -40,10 +53,13 @@ Claude Code uses its runtime-specific plugin manifest and guidance under `.claud
 
 ## Runtime Layout
 
-- `skills/` contains the Codex-compatible grouped skill surface. Codex requires this path in `.codex-plugin/plugin.json`.
-- `codex/` contains Codex runtime notes.
-- `.claude-plugin/` and `claude/` contain Claude Code runtime files.
-- `.mcp.json` configures XcodeBuildMCP-backed iOS simulator workflows.
+Each runtime keeps its skills in its own folder:
+
+- `skills/` contains the Codex grouped skill surface. Codex requires this root path in `.codex-plugin/plugin.json`.
+- `claude/skills/` contains the Claude grouped skill surface. The Claude marketplace entry uses a `git-subdir` source pointing at `claude/`, so Claude loads only this folder and never the Codex root `skills/`.
+- `.claude-plugin/marketplace.json` is the Claude marketplace catalog; `claude/.claude-plugin/plugin.json` is the Claude plugin manifest.
+- `codex/` and `claude/` contain Codex and Claude runtime notes.
+- `.mcp.json` configures XcodeBuildMCP-backed iOS simulator workflows for Codex.
 
 ## Source Attribution
 
