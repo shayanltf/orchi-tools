@@ -129,5 +129,5 @@ This keeps the motion coherent and avoids duplicate-hit-target bugs.
 
 ## Concrete example
 
-- Pool iOS tile detail reveal: `/Users/dimillian/Documents/Dev/Pool/pool-ios/Pool/Sources/Features/Tile/Detail/TileDetailView.swift`
-- Secondary content anchor example: `/Users/dimillian/Documents/Dev/Pool/pool-ios/Pool/Sources/Features/Tile/Detail/TileDetailIntentListView.swift`
+- Primary detail screen reveal: use the screen that owns the scroll state and hero content.
+- Secondary content anchor example: use the nested detail section that becomes visible after reveal progress crosses the threshold.

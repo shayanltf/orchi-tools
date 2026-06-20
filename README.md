@@ -6,6 +6,8 @@ Maintained by Shayan Latif, with source published from `shayanltf/orchi-tools`.
 
 ## What It Contains
 
+- `.claude-plugin/marketplace.json` - Claude Code marketplace entry for installing from this repo.
+- `.agents/plugins/marketplace.json` - Codex marketplace entry for installing from this repo.
 - `docs/INDEX.md` - root context map with one leaf line per file.
 - `WORKFLOW.md` - import, naming, docs, research, squad, and release workflow.
 - `docs/context/` - reusable high-fidelity agent context, caveman-compressed.
@@ -16,6 +18,41 @@ Maintained by Shayan Latif, with source published from `shayanltf/orchi-tools`.
 - `.claude-plugin/plugin.json` - Claude Code plugin manifest.
 - `.codex-plugin/plugin.json` - Codex plugin manifest.
 - `licenses/` - copied third-party license files for imported MIT sources.
+
+## Install
+
+Install from the marketplace metadata. You do not need to clone this repo into every project.
+
+### Claude Code
+
+```bash
+claude plugin marketplace add shayanltf/orchi-tools@v0.1.0
+claude plugin install apple-skills@orchi-tools
+```
+
+Use skills by namespace:
+
+```text
+/apple-skills:swiftui-pro
+/apple-skills:swift-concurrency
+/apple-skills:xcode-build-orchestrator
+```
+
+### Codex
+
+```bash
+codex plugin marketplace add shayanltf/orchi-tools --ref v0.1.0
+```
+
+Then open the Codex app plugin directory, choose the `Orchi Tools` marketplace, and install or enable `Apple Skills`.
+
+Once enabled, ask Codex to use Apple Skills for Apple ecosystem work, for example:
+
+```text
+Use Apple Skills to review this SwiftUI view.
+Use Apple Skills to fix these Swift concurrency diagnostics.
+Use Apple Skills to optimize this Xcode build.
+```
 
 ## Skill Library
 
@@ -70,21 +107,15 @@ Public sources researched but not copied because of license or availability cons
 
 Third-party license copies live in `licenses/`.
 
-## Use
+## Local Development
 
-Claude Code can load this repository as a local plugin:
+For maintainers only, test the Claude plugin directly from a checkout:
 
 ```bash
 claude --plugin-dir .
 ```
 
-Invoke the context skill as:
-
-```text
-/apple-skills:<skill-name>
-```
-
-Codex can load the same repository through its local plugin flow. The Codex manifest points at `skills/`.
+Codex uses `.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json` for local marketplace validation and install flow.
 
 ## Release
 

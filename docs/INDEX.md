@@ -5,7 +5,9 @@
 - [README](../README.md) - Plugin purpose, skill library, source attribution, runtime use, release line.
 - [WORKFLOW](../WORKFLOW.md) - Import, naming, docs, research, squads, and release rules.
 - [Claude manifest](../.claude-plugin/plugin.json) - Claude plugin metadata for `apple-skills` and root `skills/`.
+- [Claude marketplace](../.claude-plugin/marketplace.json) - Claude install catalog for `apple-skills@orchi-tools`.
 - [Codex manifest](../.codex-plugin/plugin.json) - Codex plugin metadata for `apple-skills`, app card text, and root `skills/`.
+- [Codex marketplace](../.agents/plugins/marketplace.json) - Codex install catalog for `Apple Skills` under `Orchi Tools`.
 - [Changelog](../CHANGELOG.md) - Release history for plugin versions.
 
 ## Context

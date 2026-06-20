@@ -4,6 +4,9 @@ Use when refreshing source-backed guidance.
 
 ## Plugin Runtimes
 
+- Codex build plugins: https://developers.openai.com/codex/plugins/build
+- Claude Code create plugins: https://code.claude.com/docs/en/plugins
+- Claude Code plugin marketplaces: https://code.claude.com/docs/en/plugin-marketplaces
 - Claude Code plugin reference: https://code.claude.com/docs/en/plugins-reference
 - Claude Code skills: https://code.claude.com/docs/en/skills
 - Codex skills: https://developers.openai.com/codex/skills

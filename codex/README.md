@@ -1,6 +1,12 @@
 # Codex Runtime
 
-Codex loads this repository through its local plugin flow. Plugin name is `apple-skills`; individual skills keep purpose-scoped names.
+Codex installs Apple Skills through the `orchi-tools` marketplace. Plugin name is `apple-skills`; individual skills keep purpose-scoped names.
+
+```bash
+codex plugin marketplace add shayanltf/orchi-tools --ref v0.1.0
+```
+
+Then install or enable `Apple Skills` from the Codex app plugin directory under `Orchi Tools`.
 
 The manifest is `.codex-plugin/plugin.json` and points at the validator-compatible default skill directory:
 
