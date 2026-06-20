@@ -1,0 +1,37 @@
+{
+  "name": "apple-skills",
+  "version": "0.1.0",
+  "description": "Centralized Apple ecosystem agent skills for Claude Code and Codex.",
+  "author": {
+    "name": "Apple Skills contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple",
+    "swift",
+    "ios",
+    "macos",
+    "claude-code",
+    "codex",
+    "skills",
+    "plugins"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Apple Skills",
+    "shortDescription": "Apple ecosystem skills for Claude Code and Codex.",
+    "longDescription": "Centralized Apple ecosystem agent skills for SwiftUI, Swift Concurrency, Swift Testing, SwiftData, Core Data, Xcode build optimization, iOS debugging, macOS packaging, and App Store release work.",
+    "developerName": "Apple Skills contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Context",
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Use Apple Skills for this Swift task.",
+      "Review this iOS feature with Apple Skills.",
+      "Optimize this Xcode build."
+    ],
+    "brandColor": "#0A84FF"
+  }
+}

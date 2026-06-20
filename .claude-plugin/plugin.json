@@ -1,0 +1,21 @@
+{
+  "name": "apple-skills",
+  "displayName": "Apple Skills",
+  "version": "0.1.0",
+  "description": "Centralized Apple ecosystem agent skills for Claude Code and Codex.",
+  "author": {
+    "name": "Apple Skills contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple",
+    "swift",
+    "ios",
+    "macos",
+    "claude-code",
+    "codex",
+    "skills",
+    "plugins"
+  ],
+  "skills": "./skills/"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "orchi-tools",
+  "interface": {
+    "displayName": "Orchi Tools"
+  },
+  "plugins": [
+    {
+      "name": "apple-skills",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/shayanltf/orchi-tools.git"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

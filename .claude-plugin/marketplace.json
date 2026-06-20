@@ -1,0 +1,31 @@
+{
+  "name": "orchi-tools",
+  "owner": {
+    "name": "Shayan Latif"
+  },
+  "description": "Installable Orchi Tools plugins.",
+  "plugins": [
+    {
+      "name": "apple-skills",
+      "displayName": "Apple Skills",
+      "description": "Centralized Apple ecosystem agent skills for Claude Code and Codex.",
+      "version": "0.1.0",
+      "source": {
+        "source": "github",
+        "repo": "shayanltf/orchi-tools"
+      },
+      "author": {
+        "name": "Apple Skills contributors"
+      },
+      "license": "MIT",
+      "category": "Productivity",
+      "tags": [
+        "apple",
+        "swift",
+        "ios",
+        "macos",
+        "skills"
+      ]
+    }
+  ]
+}
