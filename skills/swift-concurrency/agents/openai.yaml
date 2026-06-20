@@ -1,0 +1,4 @@
+interface:
+  display_name: "Swift Concurrency"
+  short_description: "Migrate code to Swift 6 concurrency"
+  default_prompt: "Use $swift-concurrency to diagnose actor isolation, Sendable, and data-race issues in this code."

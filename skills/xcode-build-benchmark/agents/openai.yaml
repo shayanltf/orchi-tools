@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xcode Build Benchmark"
+  short_description: "Benchmark Xcode build times"
+  default_prompt: "Use $xcode-build-benchmark to capture clean and incremental Xcode build baselines."
