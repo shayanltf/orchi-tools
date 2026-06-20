@@ -1,6 +1,14 @@
 # Import Map
 
-Use when tracing repo skill destination to OpenAI source path.
+Use when tracing repo skill destinations to OpenAI source paths.
+
+## Codex Grouped Skills
+
+- `codex/apple/skills/swiftui` <- `swiftui-ui-patterns`, `swiftui-patterns`, `swiftui-liquid-glass`, `liquid-glass`, `swiftui-view-refactor`, `view-refactor`.
+- `codex/apple/skills/ios` <- `ios-app-intents`, `ios-debugger-agent`, `ios-simulator-browser`.
+- `codex/apple/skills/macos` <- `appkit-interop`, `window-management`, `signing-entitlements`, `packaging-notarization`.
+- `codex/apple/skills/build` <- `build-run-debug`, `swiftpm-macos`, `test-triage`.
+- `codex/apple/skills/performance` <- `ios-ettrace-performance`, `ios-memgraph-leaks`, `swiftui-performance-audit`, `telemetry`.
 
 ## iOS From `plugins/build-ios-apps/skills`
 
@@ -28,10 +36,10 @@ Use when tracing repo skill destination to OpenAI source path.
 - `view-refactor` <- `plugins/build-macos-apps/skills/view-refactor`
 - `window-management` <- `plugins/build-macos-apps/skills/window-management`
 
-## Root Support Files
+## Support Files
 
-- `.mcp.json` <- `plugins/build-ios-apps/.mcp.json`
+- `codex/apple/.mcp.json` <- `plugins/build-ios-apps/.mcp.json`
 - `commands/` <- `plugins/build-macos-apps/commands`
-- `assets/build-ios-apps-small.svg` <- `plugins/build-ios-apps/assets/build-ios-apps-small.svg`
-- `assets/build-macos-apps-small.svg` <- `plugins/build-macos-apps/assets/build-macos-apps-small.svg`
-- `assets/app-icon.png` <- `plugins/build-ios-apps/assets/app-icon.png`
+- `codex/apple/assets/build-ios-apps-small.svg` <- `plugins/build-ios-apps/assets/build-ios-apps-small.svg`
+- `codex/apple/assets/build-macos-apps-small.svg` <- `plugins/build-macos-apps/assets/build-macos-apps-small.svg`
+- `codex/apple/assets/app-icon.png` <- `plugins/build-ios-apps/assets/app-icon.png`

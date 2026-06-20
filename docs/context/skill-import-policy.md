@@ -6,7 +6,7 @@ Use before adding, renaming, or removing skills.
 - Current source paths: `plugins/build-ios-apps`, `plugins/build-macos-apps`.
 - Import Apple-related skill directories only.
 - Preserve `SKILL.md`, `references/`, `scripts/`, and `agents/openai.yaml`.
-- Preserve supporting root files when skills require them: `.mcp.json`, `commands/`, assets.
+- Preserve supporting runtime files when skills require them: MCP config, `commands/`, assets.
 - Keep skill folder names purpose-scoped.
 - Remove unused source references from README, docs, research, and copied skill bodies.
 - Attribute OpenAI in README and research.

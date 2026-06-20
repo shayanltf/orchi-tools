@@ -18,6 +18,6 @@ Use when checking what was imported.
 ## Copy Decision
 
 - Copy OpenAI Apple-related skill directories.
-- Copy root support files needed by those skills: `.mcp.json`, `commands/`, assets.
+- Copy runtime support files needed by those skills: `codex/apple/.mcp.json`, `commands/`, assets.
 - Attribute OpenAI and Thomas Ricouard (Dimillian) in README.
 - Do not keep researched-but-unused public sources in repo docs.

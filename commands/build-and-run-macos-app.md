@@ -23,7 +23,7 @@ Codex app Run button, then use that script as the default build/run entrypoint.
 3. Create or update `script/build_and_run.sh` so it always stops the current app, builds the macOS target, and launches the fresh result.
 4. For SwiftPM, keep raw executable launch only for true CLI tools; for AppKit/SwiftUI GUI apps, create a project-local `.app` bundle and launch it with `/usr/bin/open -n`.
 5. Support optional script flags for `--debug`, `--logs`, `--telemetry`, and `--verify`.
-6. Follow the canonical bootstrap contract in `../skills/build-run-debug/references/run-button-bootstrap.md` for the exact script shape and `.codex/environments/environment.toml` format.
+6. Follow the canonical bootstrap contract in `../codex/apple/skills/build/references/build-run-debug/run-button-bootstrap.md` for the exact script shape and `.codex/environments/environment.toml` format.
 7. Run the script in the requested mode and summarize any build, script, or launch failure.
 
 ## Guardrails

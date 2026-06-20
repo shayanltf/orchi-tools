@@ -8,7 +8,9 @@ codex plugin marketplace add shayanltf/orchi-tools
 
 Open the Codex app plugin directory, choose the `Orchi Tools` marketplace, then install or enable `Apple`.
 
-Codex reads `.codex-plugin/plugin.json`. The manifest points at the validator-compatible grouped skill directory:
+Codex reads `codex/apple/.codex-plugin/plugin.json`. The root marketplace points to `codex/apple/` as the Codex plugin directory.
+
+Inside that plugin directory, the manifest points at the validator-compatible grouped skill directory:
 
 ```text
 skills/
@@ -32,4 +34,4 @@ Use $build to triage this SwiftPM test failure.
 Use $performance to investigate this memory growth.
 ```
 
-Codex loads `.mcp.json` for XcodeBuildMCP-backed iOS simulator workflows.
+Codex loads `codex/apple/.mcp.json` for XcodeBuildMCP-backed iOS simulator workflows.

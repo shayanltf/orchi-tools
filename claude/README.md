@@ -24,9 +24,9 @@ Claude Code reads its plugin from the `claude/` subdirectory:
 - `claude/.claude-plugin/plugin.json` - Claude plugin manifest (`apple`).
 - `claude/skills/<skill>/SKILL.md` - grouped Claude skills, each with its own `references/`.
 
-The marketplace entry uses a `git-subdir` source pointing at `claude/`, so the Claude plugin root is `claude/` and Claude loads only `claude/skills/`. Root `skills/` belongs to the Codex plugin and is never loaded by Claude.
+The marketplace entry uses a `git-subdir` source pointing at `claude/`, so the Claude plugin root is `claude/` and Claude loads only `claude/skills/`. Codex loads its own plugin from `codex/apple/`.
 
-For maintainer validation from a checkout:
+Run maintainer validation from a checkout:
 
 ```bash
 claude --plugin-dir ./claude

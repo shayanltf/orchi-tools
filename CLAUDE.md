@@ -7,7 +7,7 @@ Guidance for Claude Code when working in this repository.
 This repository publishes the `apple` plugin for two harnesses from one source:
 
 - Claude Code, served from the `claude/` subdirectory.
-- Codex, served from the repository root.
+- Codex, served from the `codex/apple/` subdirectory.
 
 Both expose the same five grouped skills: `swiftui`, `ios`, `macos`, `build`, and `performance`. The skill content comes from OpenAI's official iOS and macOS plugin examples.
 
@@ -17,19 +17,21 @@ Both expose the same five grouped skills: `swiftui`, `ios`, `macos`, `build`, an
 - `claude/skills/<skill>/SKILL.md` defines each grouped skill, with that skill's supporting files under `claude/skills/<skill>/references/`.
 - `.claude-plugin/marketplace.json` (repo root) is the Claude marketplace catalog. Its `apple` entry uses a `git-subdir` source with `path: claude`, so the Claude plugin root is `claude/`.
 
-Because the plugin root is `claude/`, Claude loads only `claude/skills/`. The root `skills/` directory belongs to the Codex plugin; never point the Claude plugin at it.
+Because the plugin root is `claude/`, Claude loads only `claude/skills/`. Keep Claude skills separate from `codex/apple/skills/`.
 
 ## Authoring Skills
 
-- `SKILL.md` is the skill itself, not an index. Its YAML frontmatter (`name`, `description`) decides when Claude loads the skill; its body is the working instructions.
-- Keep imported source content intact. Group and merge it; do not rewrite it. Each merged source skill is preserved under `references/modules/<module>/source.md` with its original `references/` and `scripts/`.
+- Treat `SKILL.md` as the skill itself, not an index. Its YAML frontmatter (`name`, `description`) decides when Claude loads the skill; its body is the working instructions.
+- Keep imported source guidance intact. Group and merge it; do not rewrite it unless paths, privacy, packaging, or style rules require edits.
+- Do not create archived source wrappers such as `source.md`.
+- Use purpose-named references and scripts inside each Claude skill when progressive disclosure is needed.
 - Reference supporting files from `SKILL.md` so Claude knows what each one holds and when to load it.
 - Do not add Codex-only files (`agents/openai.yaml`) to the Claude skills.
 - Do not prefix skill folder names with the plugin name. The folder name `swiftui` becomes `/apple:swiftui`.
 
 ## Validation
 
-- Validate the plugin from a checkout: `claude --plugin-dir ./claude`.
+- Run `claude --plugin-dir ./claude` from a checkout.
 - Confirm each `claude/skills/<skill>/SKILL.md` has valid frontmatter and that every path it references resolves inside that skill folder.
 
 ## Conventions

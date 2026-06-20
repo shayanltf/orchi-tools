@@ -53,13 +53,13 @@ Invoke the grouped skills by namespace:
 
 ## Runtime Layout
 
-Each runtime keeps its skills in its own folder:
+Each runtime keeps its skills in its own plugin folder:
 
-- `skills/` contains the Codex grouped skill surface. Codex requires this root path in `.codex-plugin/plugin.json`.
-- `claude/skills/` contains the Claude grouped skill surface. The Claude marketplace entry uses a `git-subdir` source pointing at `claude/`, so Claude loads only this folder and never the Codex root `skills/`.
-- `.claude-plugin/marketplace.json` is the Claude marketplace catalog; `claude/.claude-plugin/plugin.json` is the Claude plugin manifest.
-- `codex/` and `claude/` contain Codex and Claude runtime notes.
-- `.mcp.json` configures XcodeBuildMCP-backed iOS simulator workflows for Codex.
+- `.agents/plugins/marketplace.json` exposes the repo marketplace.
+- `codex/apple/` contains the Codex plugin root, manifest, assets, MCP config, and Codex-specific skills at `codex/apple/skills/`.
+- `.claude-plugin/marketplace.json` exposes the Claude marketplace.
+- `claude/` contains the Claude plugin root, manifest, and Claude-specific skills at `claude/skills/`.
+- Keep Codex and Claude skill files separate, even when both runtimes use the same source guidance.
 
 ## Source Attribution
 
@@ -75,9 +75,9 @@ Only OpenAI-sourced Apple skill content belongs in this repo unless a future wor
 
 ## Local Development
 
-Run the Codex plugin validator from the `plugin-creator` skill against the repo root.
+Run the Codex plugin validator from the `plugin-creator` skill against `codex/apple/`.
 
-Codex uses `.codex-plugin/plugin.json`, `.mcp.json`, and `.agents/plugins/marketplace.json` for marketplace validation and install flow.
+Codex uses `codex/apple/.codex-plugin/plugin.json`, `codex/apple/.mcp.json`, and `.agents/plugins/marketplace.json` for marketplace validation and install flow.
 
 ## Release
 
