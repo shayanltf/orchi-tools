@@ -46,10 +46,10 @@ the source of truth, while AppKit handles the imperative edge.
 
 ## References
 
-- `references/representables.md`: choosing between view and view-controller wrappers, plus coordinator patterns.
-- `references/window-panels.md`: window access, utility windows, and open/save panels.
-- `references/responder-menus.md`: first responder, command routing, and menu validation.
-- `references/drag-drop-pasteboard.md`: pasteboard, file URLs, and desktop drag/drop edges.
+- `appkit-interop-representables.md`: choosing between view and view-controller wrappers, plus coordinator patterns.
+- `appkit-interop-window-panels.md`: window access, utility windows, and open/save panels.
+- `appkit-interop-responder-menus.md`: first responder, command routing, and menu validation.
+- `appkit-interop-drag-drop-pasteboard.md`: pasteboard, file URLs, and desktop drag/drop edges.
 
 ## Guardrails
 

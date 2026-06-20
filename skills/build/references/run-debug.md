@@ -58,14 +58,14 @@ simulator-specific workflows onto pure macOS tasks.
    - For SwiftPM GUI apps, make the script build the product, create `dist/<AppName>.app`, copy the binary to `Contents/MacOS/<AppName>`, generate a minimal `Contents/Info.plist` with `CFBundlePackageType=APPL`, `CFBundleExecutable`, `CFBundleIdentifier`, `CFBundleName`, `LSMinimumSystemVersion`, and `NSPrincipalClass=NSApplication`, then launch with `/usr/bin/open -n <bundle>`.
    - For SwiftPM GUI `--logs` and `--telemetry`, launch the bundle with `/usr/bin/open -n` first, then stream unified logs with `/usr/bin/log stream --info ...`.
    - Do not recommend direct SwiftPM executable launch for AppKit/SwiftUI GUI apps.
-   - Use `references/run-button-bootstrap.md` as the canonical source for the
+   - Use `references/run-debug-run-button-bootstrap.md` as the canonical source for the
      script shape and exact environment file format. Do not fork a second
      authoritative snippet in another skill or command.
    - Keep the run script outside app source. It belongs in `script/build_and_run.sh`, not in `App/`, `Views/`, `Models/`, `Stores/`, `Services/`, or `Support/`.
 
 4. Write `.codex/environments/environment.toml` at the project root once the script exists.
    - Use this exact placement: `.codex/environments/environment.toml`.
-   - Use the exact action shape in `references/run-button-bootstrap.md`.
+   - Use the exact action shape in `references/run-debug-run-button-bootstrap.md`.
    - This file is what gives the user a Codex app Run button wired to the script.
    - If the project already has this file, update the `Run` action command to point at `./script/build_and_run.sh` instead of creating a duplicate action.
    - Keep this Codex environment config separate from Swift app source files.
@@ -106,7 +106,7 @@ simulator-specific workflows onto pure macOS tasks.
 
 ## References
 
-- `references/run-button-bootstrap.md`: canonical `build_and_run.sh` and `.codex/environments/environment.toml` contract.
+- `references/run-debug-run-button-bootstrap.md`: canonical `build_and_run.sh` and `.codex/environments/environment.toml` contract.
 
 ## Guardrails
 
