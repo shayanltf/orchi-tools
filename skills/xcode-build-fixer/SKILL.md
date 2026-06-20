@@ -118,7 +118,7 @@ A single change that regresses on its own may still be worth keeping if it enabl
 
 ### Best-practice settings are not revert candidates
 
-Some build settings are Apple's recommended modern defaults. These should be applied and kept regardless of whether the immediate benchmark shows a measurable improvement. They are not speculative optimizations -- they align the project with Apple's toolchain direction and will compound in value over future Xcode releases. The fixer must never recommend reverting these settings based on a single benchmark result.
+Some build settings are Apple's recommended modern defaults. Apply and keep them regardless of whether the immediate benchmark shows a measurable improvement. They are not speculative optimizations -- they align the project with Apple's toolchain direction and compound in value over future Xcode releases. The fixer must never recommend reverting these settings based on a single benchmark result.
 
 Best-practice settings that should always be kept once applied:
 

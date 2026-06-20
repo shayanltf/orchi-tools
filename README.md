@@ -26,7 +26,7 @@ Install from the marketplace metadata. You do not need to clone this repo into e
 ### Claude Code
 
 ```bash
-claude plugin marketplace add shayanltf/orchi-tools@v0.1.0
+claude plugin marketplace add shayanltf/orchi-tools
 claude plugin install apple-skills@orchi-tools
 ```
 
@@ -41,7 +41,7 @@ Use skills by namespace:
 ### Codex
 
 ```bash
-codex plugin marketplace add shayanltf/orchi-tools --ref v0.1.0
+codex plugin marketplace add shayanltf/orchi-tools
 ```
 
 Then open the Codex app plugin directory, choose the `Orchi Tools` marketplace, and install or enable `Apple Skills`.
@@ -119,4 +119,4 @@ Codex uses `.codex-plugin/plugin.json` and `.agents/plugins/marketplace.json` fo
 
 ## Release
 
-Initial release: `v0.1.0`.
+Initial release tag: `v0.1.0`.

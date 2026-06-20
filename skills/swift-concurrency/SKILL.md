@@ -23,7 +23,7 @@ Project settings that change concurrency behavior:
 | Upcoming features | `.enableUpcomingFeature("NonisolatedNonsendingByDefault")` | `SWIFT_UPCOMING_FEATURE_*` |
 | Approachable Concurrency | N/A (use individual upcoming features) | `SWIFT_APPROACHABLE_CONCURRENCY` |
 
-> **Xcode 26 note**: New projects created in Xcode 26 will often start with `SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor` and `SWIFT_APPROACHABLE_CONCURRENCY = YES` enabled by default. Treat these as likely defaults for newly created projects, not as confirmed settings.
+> **Xcode 26 note**: New projects created in Xcode 26 often start with `SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor` and `SWIFT_APPROACHABLE_CONCURRENCY = YES` enabled by default. Treat these as likely defaults for newly created projects, not as confirmed settings.
 
 If any of these are unknown, ask the developer to confirm them before giving migration-sensitive guidance. Do not guess, even for new Xcode 26 projects.
 

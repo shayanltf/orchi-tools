@@ -30,7 +30,7 @@ If the project has both clean-build and incremental-build pain, benchmark both. 
 
 ## Worktree Considerations
 
-When benchmarking inside a git worktree, SPM packages with `exclude:` paths that reference gitignored directories (e.g., `__Snapshots__`) will cause `xcodebuild -resolvePackageDependencies` to crash. Create those missing directories before running any builds.
+When benchmarking inside a git worktree, SPM packages with `exclude:` paths that reference gitignored directories (e.g., `__Snapshots__`) make `xcodebuild -resolvePackageDependencies` crash. Create those missing directories before running any builds.
 
 ## Default Workflow
 

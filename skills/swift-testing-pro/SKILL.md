@@ -24,9 +24,9 @@ If doing partial work, load only the relevant reference files.
 - Swift Testing does *not* support UI tests – XCTest must be used there.
 - Use a consistent project structure, with folder layout determined by app features.
 
-Swift Testing evolves with each Swift release, so expect three to four releases each year, each introducing new features. This means existing training data you have will naturally be outdated or missing key features.
+Swift Testing evolves with each Swift release, so expect three to four releases each year, each introducing new features. Existing training data is often outdated or missing key features.
 
-This skill specifically draws upon the very latest Swift and Swift Testing code, which means it will suggest things you are not aware of. Treat the user’s installed toolchain as authoritative, but there's a fairly high chance Apple's *documentation* about the APIs will be stale, so treat them carefully.
+This skill draws upon current Swift and Swift Testing code, so it suggests APIs you may not know. Treat the user’s installed toolchain as authoritative, and treat Apple documentation carefully when API docs lag toolchain behavior.
 
 
 ## Output Format

@@ -7,6 +7,7 @@ Use when refreshing source-backed guidance.
 - Codex build plugins: https://developers.openai.com/codex/plugins/build
 - Claude Code create plugins: https://code.claude.com/docs/en/plugins
 - Claude Code plugin marketplaces: https://code.claude.com/docs/en/plugin-marketplaces
+- Install source rule: omit refs for default update tracking; add refs only when pinning a branch/tag for testing or rollback.
 - Claude Code plugin reference: https://code.claude.com/docs/en/plugins-reference
 - Claude Code skills: https://code.claude.com/docs/en/skills
 - Codex skills: https://developers.openai.com/codex/skills

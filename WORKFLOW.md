@@ -31,6 +31,25 @@ Rules:
 - Do not turn docs into task logs.
 - Do not copy every setup-context file from outside sources.
 
+## Writing Style
+
+Apply to README, WORKFLOW, docs, and skill-facing instructions:
+
+- Use imperative instructions: `Run`, `Configure`, `Install`.
+- Use present tense: `This plugin provides`; avoid future tense.
+- Use second person when addressing the reader: `Install the marketplace`.
+- Use third person when describing the project: `Apple Skills contains`.
+- Use active voice: `Codex loads skills`, not `skills are loaded by Codex`.
+- Use neutral technical language. Avoid marketing adjectives.
+
+## Install Distribution
+
+- Public install commands omit version refs.
+- Marketplace plugin sources omit version refs.
+- Claude Code and Codex track marketplace sources from the configured repository.
+- Use explicit refs only for release validation, frozen installs, or rollback testing.
+- Keep README install guidance harness-first; do not make project cloning the primary path.
+
 ## `docs/context/`
 
 Use for reusable high-fidelity context future agents should load again.

@@ -83,8 +83,8 @@ class DestinationStore {
 
 ### Summary
 
-1. **Data loss (high):** Missing delete rule on line 8 of Destination.swift means sights will be orphaned when a destination is deleted.
-2. **Crash (high):** `isEmpty == false` on line 22 will crash at runtime – use `!isEmpty` instead.
+1. **Data loss (high):** Missing delete rule on line 8 of Destination.swift orphans sights when a destination is deleted.
+2. **Crash (high):** `isEmpty == false` on line 22 crashes at runtime – use `!isEmpty` instead.
 3. **Incorrect behavior (high):** `@Query` on line 5 of DestinationListView.swift only works inside SwiftUI views.
 
 End of example.

@@ -12,8 +12,7 @@
       "version": "0.1.0",
       "source": {
         "source": "github",
-        "repo": "shayanltf/orchi-tools",
-        "ref": "v0.1.0"
+        "repo": "shayanltf/orchi-tools"
       },
       "author": {
         "name": "Apple Skills contributors"
