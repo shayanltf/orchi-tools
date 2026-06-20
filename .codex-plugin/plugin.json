@@ -1,0 +1,37 @@
+{
+  "name": "apple-one-skills",
+  "version": "0.1.0",
+  "description": "Compressed Apple-platform agent context for Claude Code and Codex plugin, skill, agent, workflow, and docs authoring.",
+  "author": {
+    "name": "Apple One Skills contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple",
+    "swift",
+    "ios",
+    "macos",
+    "claude-code",
+    "codex",
+    "skills",
+    "plugins"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Apple One Skills",
+    "shortDescription": "Apple-platform context pack for Claude Code and Codex.",
+    "longDescription": "Compressed, source-backed context for Apple-platform agent work across Claude Code and Codex: plugin packaging, skill authoring, subagents, workflow conversion, rule surfaces, docs output, and privacy review.",
+    "developerName": "Apple One Skills contributors",
+    "category": "Productivity",
+    "capabilities": [
+      "Context",
+      "Skills"
+    ],
+    "defaultPrompt": [
+      "Load Apple One context for this agent task.",
+      "Review this skill against Apple One guidance.",
+      "Map this workflow for Claude and Codex."
+    ],
+    "brandColor": "#0A84FF"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "apple-one-skills",
+  "displayName": "Apple One Skills",
+  "version": "0.1.0",
+  "description": "Compressed Apple-platform agent context for Claude Code and Codex plugin, skill, agent, workflow, and docs authoring.",
+  "author": {
+    "name": "Apple One Skills contributors"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple",
+    "swift",
+    "ios",
+    "macos",
+    "claude-code",
+    "codex",
+    "skills",
+    "plugins"
+  ],
+  "skills": "./claude/skills/"
+}
