@@ -86,5 +86,5 @@ Button("Confirm") { }
 ```
 
 ## Resources
-- Reference guide: `references/liquid-glass.md`
+- Reference guide: `./liquid-glass-api.md`
 - Prefer Apple docs for up-to-date API details, and use web search to consult current Apple Developer documentation in addition to the references above.

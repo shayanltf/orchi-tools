@@ -32,7 +32,7 @@ description: Mirror an iOS Simulator into the Codex in-app browser and render Sw
 Use the bundled launcher when the requested previews live in an importable Swift package. Point it at the package manifest and select the target whose previews should be displayed. It generates a disposable host project outside the user's source tree, installs and launches that host in Simulator, and watches the package for edits.
 
 ```bash
-node <skill-root>/scripts/swiftui-preview-browser.mjs \
+node <skill-root>/scripts/simulator-browser/swiftui-preview-browser.mjs \
   /absolute/path/to/Package.swift \
   --package-target "<target>" \
   --device "<simulator-udid>"

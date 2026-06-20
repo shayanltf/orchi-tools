@@ -124,7 +124,7 @@ deployment targets, expect to use more AppKit bridging or availability guards.
 - Keep one clear path back to regular window management if the plain style makes
   the window feel invisible or hard to move.
 
-For concrete window modifier examples, read `references/api-snippets.md`.
+For concrete window modifier examples, read `window-management-api-snippets.md`.
 
 ## Review Checklist
 

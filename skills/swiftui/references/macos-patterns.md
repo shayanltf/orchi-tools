@@ -13,7 +13,7 @@ Choose a track based on your goal:
 
 - Identify the feature or scene and the primary interaction model: document, editor, sidebar-detail, utility window, settings, or menu bar extra.
 - Read the nearest existing scene or root view before inventing a new desktop structure.
-- Choose the relevant reference from `references/components-index.md`.
+- Choose the relevant reference from `./macos-components-index.md`.
 - If SwiftUI cannot express the required platform behavior cleanly, use the `appkit-interop` skill rather than forcing a shaky workaround.
 
 ### New app scaffolding
@@ -72,7 +72,7 @@ Before writing the full UI:
 - Use SwiftUI-native scenes and views first. If you need low-level window, responder-chain, text system, or panel control, switch to `appkit-interop`.
 
 For concrete sidebar row and split-view background examples, read
-`references/split-inspectors.md`.
+`./macos-split-inspectors.md`.
 
 ## State Ownership Summary
 
@@ -93,12 +93,12 @@ Choose the ownership location first, then the wrapper. Do not turn simple deskto
 
 ## Cross-Cutting References
 
-- `references/components-index.md`: entry point for scene and component guidance.
-- `references/windowing.md`: choosing between `WindowGroup`, `Window`, `DocumentGroup`, and window-opening patterns.
-- `references/settings.md`: dedicated settings scenes, `SettingsLink`, and preference layouts.
-- `references/commands-menus.md`: command menus, keyboard shortcuts, focused values, and desktop action routing.
-- `references/split-inspectors.md`: sidebars, split views, selection-driven layout, and inspectors.
-- `references/menu-bar-extra.md`: menu bar extra structure and when it fits.
+- `./macos-components-index.md`: entry point for scene and component guidance.
+- `./macos-windowing.md`: choosing between `WindowGroup`, `Window`, `DocumentGroup`, and window-opening patterns.
+- `./macos-settings.md`: dedicated settings scenes, `SettingsLink`, and preference layouts.
+- `./macos-commands-menus.md`: command menus, keyboard shortcuts, focused values, and desktop action routing.
+- `./macos-split-inspectors.md`: sidebars, split views, selection-driven layout, and inspectors.
+- `./macos-menu-bar-extra.md`: menu bar extra structure and when it fits.
 
 ## Anti-Patterns
 
@@ -128,7 +128,7 @@ Choose the ownership location first, then the wrapper. Do not turn simple deskto
 
 ## Component References
 
-Use `references/components-index.md` as the entry point. Each component reference should include:
+Use `./macos-components-index.md` as the entry point. Each component reference should include:
 - intent and best-fit scenarios
 - minimal usage pattern with desktop conventions
 - pitfalls and discoverability notes
