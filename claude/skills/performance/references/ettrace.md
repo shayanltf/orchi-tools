@@ -5,7 +5,7 @@ description: Capture and interpret iOS Simulator ETTrace profiles. Use when prof
 
 # iOS ETTrace Performance
 
-Use this skill to capture a focused, symbolicated ETTrace profile from an iOS simulator app. Pair it with `../ios-debugger-agent/SKILL.md` when the task also needs simulator build, install, launch, UI driving, logs, or screenshots.
+Use this skill to capture a focused, symbolicated ETTrace profile from an iOS simulator app. Pair it with the `ios` skill when the task also needs simulator build, install, launch, UI driving, logs, or screenshots.
 
 ## Core Workflow
 
@@ -104,7 +104,7 @@ SKILL_DIR="<absolute path to this loaded skill folder>"
 APP="<path-to-built-simulator-App.app>"
 DSYMS="$RUN_DIR/dsyms"
 
-"$SKILL_DIR/scripts/collect_ios_dsyms.sh" \
+"$SKILL_DIR/scripts/ettrace/collect_ios_dsyms.sh" \
   --app "$APP" \
   --out-dir "$DSYMS" \
   --search-root "$(dirname "$APP")" \
@@ -167,7 +167,7 @@ find "$RUN_DIR" -maxdepth 1 -name 'output_*.json' -newer "$CAPTURE_MARKER" -prin
   cp "$json" "$preserved"
   {
     echo "## ${preserved##*/}"
-    python3 "$SKILL_DIR/scripts/analyze_flamegraph_json.py" "$preserved"
+    python3 "$SKILL_DIR/scripts/ettrace/analyze_flamegraph_json.py" "$preserved"
   } >> "$PRESERVED_DIR/summary.txt"
 done
 if [ ! -s "$PRESERVED_DIR/summary.txt" ]; then
