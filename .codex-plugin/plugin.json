@@ -41,7 +41,7 @@
       "Use $performance to investigate this Apple app performance issue."
     ],
     "brandColor": "#0A84FF",
-    "composerIcon": "./assets/app-icon.svg",
+    "composerIcon": "./assets/app-icon.png",
     "logo": "./assets/app-icon.png",
     "websiteURL": "https://github.com/shayanltf/orchi-tools"
   }
