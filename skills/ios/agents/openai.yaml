@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS"
+  short_description: "Build and inspect iOS simulator workflows"
+  default_prompt: "Use $ios to build, launch, inspect, or extend this iOS app workflow."

@@ -6,16 +6,16 @@
   "description": "Installable Orchi Tools plugins.",
   "plugins": [
     {
-      "name": "apple-skills",
-      "displayName": "Apple Skills",
-      "description": "OpenAI-sourced iOS and macOS skills for Claude Code and Codex.",
-      "version": "0.1.0",
+      "name": "apple",
+      "displayName": "Apple",
+      "description": "OpenAI-sourced Apple skills for Claude Code, grouped into SwiftUI, iOS, macOS, build, and performance scopes.",
       "source": {
-        "source": "github",
-        "repo": "shayanltf/orchi-tools"
+        "source": "git-subdir",
+        "url": "shayanltf/orchi-tools",
+        "path": "claude"
       },
       "author": {
-        "name": "Apple Skills contributors"
+        "name": "Orchi Team"
       },
       "license": "MIT",
       "category": "Productivity",

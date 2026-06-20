@@ -1,0 +1,22 @@
+{
+  "name": "apple",
+  "displayName": "Apple",
+  "version": "0.1.0",
+  "description": "Apple ecosystem skills for Claude Code, grouped into SwiftUI, iOS, macOS, build, and performance scopes. Sourced from OpenAI's iOS and macOS plugin examples.",
+  "author": {
+    "name": "Orchi Team"
+  },
+  "license": "MIT",
+  "keywords": [
+    "apple",
+    "swift",
+    "ios",
+    "macos",
+    "swiftui",
+    "appkit",
+    "xcode",
+    "claude-code",
+    "skills",
+    "plugins"
+  ]
+}

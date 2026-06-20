@@ -1,14 +1,16 @@
-# Apple Skills Index
+# Apple Plugin Index
 
 ## Root
 
-- [README](../README.md) - Plugin purpose, install flow, OpenAI source attribution, skill library, local validation, release line.
-- [WORKFLOW](../WORKFLOW.md) - OpenAI-only source rule, naming, docs, research, writing, install, review, and release rules.
-- [Claude manifest](../.claude-plugin/plugin.json) - Claude plugin metadata for `apple-skills` and root `skills/`.
-- [Claude marketplace](../.claude-plugin/marketplace.json) - Claude install catalog for `apple-skills@orchi-tools`.
-- [Codex manifest](../.codex-plugin/plugin.json) - Codex plugin metadata, MCP config pointer, app card text, and root `skills/`.
-- [Codex marketplace](../.agents/plugins/marketplace.json) - Codex install catalog for `Apple Skills` under `Orchi Tools`.
-- [MCP config](../.mcp.json) - XcodeBuildMCP server config used by iOS simulator skills.
+- [README](../README.md) - Plugin purpose, Codex and Claude install flow, grouped skill library, runtime layout, OpenAI source attribution, release line.
+- [WORKFLOW](../WORKFLOW.md) - Source policy, naming and grouping, runtime layout, skill authoring, docs, writing, install distribution, and release practices.
+- [CLAUDE.md](../CLAUDE.md) - Claude Code guidance: repo purpose, Claude plugin structure, skill authoring, and validation.
+- [AGENTS.md](../AGENTS.md) - Agent entry point; references `CLAUDE.md`.
+- [Claude manifest](../claude/.claude-plugin/plugin.json) - Claude plugin metadata for `apple`; plugin root is `claude/`, skills at `claude/skills/`.
+- [Claude marketplace](../.claude-plugin/marketplace.json) - Claude install catalog for `apple@orchi-tools` with a `git-subdir` source pointing at `claude/`.
+- [Codex manifest](../.codex-plugin/plugin.json) - Codex plugin metadata for `apple`, MCP config pointer, app card text, and root `skills/`.
+- [Codex marketplace](../.agents/plugins/marketplace.json) - Codex install catalog for `apple` under `Orchi Tools`.
+- [MCP config](../.mcp.json) - XcodeBuildMCP server config used by Codex iOS simulator skills.
 - [Build And Run macOS App Command](../commands/build-and-run-macos-app.md) - Detect project shape, create/update a run script, build, stop old app instance, and launch the fresh app.
 - [Fix Codesign Error Command](../commands/fix-codesign-error.md) - Inspect macOS signing or entitlement failures and name the minimum fix path.
 - [Test macOS App Command](../commands/test-macos-app.md) - Run the smallest useful macOS test scope and classify failures by cause.
@@ -17,7 +19,7 @@
 ## Context
 
 - [Library Navigation](context/library-navigation.md) - Fast skill picker by Apple task: iOS App Intents, simulator, SwiftUI, macOS build, AppKit, signing, tests.
-- [Plugin Packaging](context/plugin-packaging.md) - Claude/Codex plugin structure rules: manifests, root `skills/`, `.mcp.json`, commands, no `CLAUDE.md` or `CODEX.md`.
+- [Plugin Packaging](context/plugin-packaging.md) - Codex and Claude packaging rules: plugin name `apple`, per-runtime skill folders, manifests, `git-subdir` Claude source, `.mcp.json`, commands.
 - [Skill Import Policy](context/skill-import-policy.md) - OpenAI-only import rules: active source paths, preserved skill structure, README attribution, stale-reference cleanup.
 - [Docs And Research Rules](context/docs-and-research-rules.md) - What belongs in `docs/context/`, `research/`, README, WORKFLOW, changelog, and issue comments.
 - [Release Review](context/release-review.md) - Validation and review checklist before PR handoff, tag move, or merge.

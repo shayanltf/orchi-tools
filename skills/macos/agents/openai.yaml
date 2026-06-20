@@ -1,0 +1,4 @@
+interface:
+  display_name: "macOS"
+  short_description: "Apply native macOS app workflows"
+  default_prompt: "Use $macos to inspect or implement native macOS app behavior."

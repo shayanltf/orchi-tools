@@ -5,7 +5,7 @@
   },
   "plugins": [
     {
-      "name": "apple-skills",
+      "name": "apple",
       "source": {
         "source": "url",
         "url": "https://github.com/shayanltf/orchi-tools.git"

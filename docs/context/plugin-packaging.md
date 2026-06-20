@@ -2,22 +2,31 @@
 
 Use when changing plugin structure.
 
-- Plugin name: `apple-skills`.
-- Display name: `Apple Skills`.
-- Root manifests: `.claude-plugin/plugin.json`, `.codex-plugin/plugin.json`.
-- Install manifests: `.claude-plugin/marketplace.json`, `.agents/plugins/marketplace.json`.
-- Public install commands omit version refs; harnesses track marketplace updates from the repository source.
-- Marketplace plugin source entries omit `ref` and `sha`.
-- Use explicit refs only for release validation, frozen installs, or rollback testing.
-- Skills live at root `skills/<skill>/SKILL.md`.
-- Skill support files stay with each skill: `references/`, `scripts/`, `agents/openai.yaml`.
-- Codex MCP servers live in `.mcp.json`; `.codex-plugin/plugin.json` points at it with `mcpServers`.
-- macOS helper commands live in root `commands/`.
-- Claude components stay at plugin root, not inside `.claude-plugin/`.
-- Claude install path: marketplace add -> plugin install -> `/apple-skills:<skill>`.
-- Every skill ships `agents/openai.yaml` for a consistent Codex card; Claude ignores it. Add `icon_small`/`icon_large`/`brand_color`/`policy` only when the source ships icon assets.
-- Codex install path: add marketplace -> install/enable `Apple Skills` in Codex plugin directory.
-- Keep Claude and Codex runtime notes in `claude/` and `codex/`.
-- Do not create `CLAUDE.md` or `CODEX.md`.
-- Do not prefix skill names with `apple-skills`.
-- Version stays `0.1.0` until next release.
+- Plugin name: `apple`. Display name: `Apple`.
+- Skills group by purpose: `swiftui`, `ios`, `macos`, `build`, `performance`.
+- Each runtime keeps skills in its own folder; do not share one skill tree.
+
+## Codex
+
+- Plugin manifest: `.codex-plugin/plugin.json` (`skills: ./skills/`, `mcpServers: ./.mcp.json`).
+- Marketplace catalog: `.agents/plugins/marketplace.json`.
+- Skills at root `skills/<group>/SKILL.md`; the Codex validator requires root `skills/`.
+- Each Codex skill ships `agents/openai.yaml` for the Codex card. Add `icon_small`/`icon_large`/`brand_color`/`policy` only when icon assets exist.
+- MCP servers in `.mcp.json`; macOS helper commands in root `commands/`.
+- Install: marketplace add -> install/enable `Apple` in the Codex plugin directory.
+
+## Claude
+
+- Plugin manifest: `claude/.claude-plugin/plugin.json`. Marketplace catalog: `.claude-plugin/marketplace.json`.
+- The marketplace entry uses a `git-subdir` source with `path: claude`, so the plugin root is `claude/` and Claude loads only `claude/skills/`, never root `skills/`.
+- Skills at `claude/skills/<group>/SKILL.md` with supporting files under each skill's `references/`. No `agents/openai.yaml` on the Claude side.
+- Install: `claude plugin marketplace add` -> `claude plugin install apple@orchi-tools` -> `/apple:<group>`.
+
+## Both
+
+- `SKILL.md` is the skill, not an index: frontmatter (`name`, `description`) plus working body.
+- Preserve imported source content under `references/modules/<module>/source.md`; merge, do not rewrite.
+- Do not prefix skill names with the plugin name.
+- Public install commands and marketplace sources omit version refs.
+- Repo guidance lives in `CLAUDE.md`; `AGENTS.md` references `CLAUDE.md`. Do not create `CODEX.md`.
+- Version stays `0.1.0` until the next release.

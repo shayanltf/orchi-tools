@@ -1,9 +1,9 @@
 {
-  "name": "apple-skills",
+  "name": "apple",
   "version": "0.1.0",
-  "description": "Apple ecosystem skills for Claude Code and Codex, sourced from OpenAI's iOS and macOS plugin examples.",
+  "description": "Apple ecosystem skills for Codex, sourced from OpenAI's iOS and macOS plugin examples.",
   "author": {
-    "name": "Apple Skills contributors"
+    "name": "Orchi Team"
   },
   "license": "MIT",
   "keywords": [
@@ -14,7 +14,6 @@
     "swiftui",
     "appkit",
     "xcode",
-    "claude-code",
     "codex",
     "skills",
     "plugins"
@@ -22,10 +21,10 @@
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
-    "displayName": "Apple Skills",
-    "shortDescription": "OpenAI-sourced iOS and macOS skills for Claude Code and Codex.",
-    "longDescription": "Apple Skills packages OpenAI's Build iOS Apps and Build macOS Apps skill workflows for App Intents, SwiftUI UI work, iOS simulator debugging, ETTrace profiling, memgraph leak checks, macOS SwiftUI and AppKit work, SwiftPM, signing, notarization, logging, test triage, and window management.",
-    "developerName": "Apple Skills contributors",
+    "displayName": "Apple",
+    "shortDescription": "OpenAI-sourced Apple skills for Codex.",
+    "longDescription": "Apple groups OpenAI's Build iOS Apps and Build macOS Apps skill workflows into SwiftUI, iOS, macOS, Build, and Performance scopes. The grouped skills cover App Intents, SwiftUI UI work, iOS simulator debugging, simulator previews, ETTrace profiling, memgraph leak checks, macOS AppKit interop, SwiftPM, signing, notarization, logging, test triage, and window management.",
+    "developerName": "Orchi Team",
     "category": "Productivity",
     "capabilities": [
       "Context",
@@ -35,9 +34,11 @@
       "Write"
     ],
     "defaultPrompt": [
-      "Use Apple Skills to refine this SwiftUI feature.",
-      "Use Apple Skills to debug this iOS simulator issue.",
-      "Use Apple Skills to inspect this macOS app."
+      "Use $swiftui to refine this SwiftUI feature.",
+      "Use $ios to debug this iOS simulator issue.",
+      "Use $macos to inspect this macOS app.",
+      "Use $build to triage this Apple project build.",
+      "Use $performance to investigate this Apple app performance issue."
     ],
     "brandColor": "#0A84FF",
     "composerIcon": "./assets/build-ios-apps-small.svg",

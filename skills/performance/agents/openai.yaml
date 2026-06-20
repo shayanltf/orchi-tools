@@ -1,0 +1,4 @@
+interface:
+  display_name: "Performance"
+  short_description: "Profile, inspect leaks, and audit runtime cost"
+  default_prompt: "Use $performance to diagnose Apple app performance, memory, or telemetry issues."
