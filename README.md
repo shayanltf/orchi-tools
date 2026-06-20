@@ -2,24 +2,7 @@
 
 Apple Skills is an open source plugin that packages Apple ecosystem skills for Claude Code and Codex.
 
-Maintained by Shayan Latif in `shayanltf/orchi-tools`.
-
-## What It Contains
-
-- `.claude-plugin/marketplace.json` - Claude Code marketplace entry for installing from this repo.
-- `.agents/plugins/marketplace.json` - Codex marketplace entry for installing from this repo.
-- `.claude-plugin/plugin.json` - Claude Code plugin manifest.
-- `.codex-plugin/plugin.json` - Codex plugin manifest.
-- `.mcp.json` - XcodeBuildMCP configuration used by iOS simulator workflows.
-- `skills/` - OpenAI-sourced Apple ecosystem skills.
-- `commands/` - OpenAI-sourced macOS helper commands.
-- `assets/` - plugin icons copied from the OpenAI Apple plugin examples.
-- `docs/INDEX.md` - root context map with one leaf line per file.
-- `docs/context/` - reusable repo context, caveman-compressed.
-- `research/` - durable source and official-docs findings for this repo.
-- `WORKFLOW.md` - source, docs, research, writing, validation, and release rules.
-- `claude/` - Claude Code runtime notes.
-- `codex/` - Codex runtime notes.
+Maintained by the Orchi Team, with source published from `shayanltf/orchi-tools`.
 
 ## Install
 

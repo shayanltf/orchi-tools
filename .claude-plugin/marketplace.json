@@ -1,7 +1,7 @@
 {
   "name": "orchi-tools",
   "owner": {
-    "name": "Shayan Latif"
+    "name": "Orchi Team"
   },
   "description": "Installable Orchi Tools plugins.",
   "plugins": [

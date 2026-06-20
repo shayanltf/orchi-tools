@@ -15,6 +15,7 @@ Use when changing plugin structure.
 - macOS helper commands live in root `commands/`.
 - Claude components stay at plugin root, not inside `.claude-plugin/`.
 - Claude install path: marketplace add -> plugin install -> `/apple-skills:<skill>`.
+- Every skill ships `agents/openai.yaml` for a consistent Codex card; Claude ignores it. Add `icon_small`/`icon_large`/`brand_color`/`policy` only when the source ships icon assets.
 - Codex install path: add marketplace -> install/enable `Apple Skills` in Codex plugin directory.
 - Keep Claude and Codex runtime notes in `claude/` and `codex/`.
 - Do not create `CLAUDE.md` or `CODEX.md`.
