@@ -34,5 +34,4 @@ Use when tracing repo skill destination to OpenAI source path.
 - `commands/` <- `plugins/build-macos-apps/commands`
 - `assets/build-ios-apps-small.svg` <- `plugins/build-ios-apps/assets/build-ios-apps-small.svg`
 - `assets/build-macos-apps-small.svg` <- `plugins/build-macos-apps/assets/build-macos-apps-small.svg`
-- `assets/app-icon.png` <- original Orchi Tools asset (custom Apple-themed plugin logo; not imported)
-- `assets/app-icon.svg` <- original Orchi Tools asset (vector composerIcon, matches `app-icon.png`)
+- `assets/app-icon.png` <- official Apple logo, rendered from `Apple_logo_black.svg` on Wikimedia Commons, centered on a 400x400 transparent canvas (used for both `logo` and `composerIcon`)
