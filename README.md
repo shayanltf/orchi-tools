@@ -75,6 +75,7 @@ Apple Skills imports Apple-related skill content from OpenAI's official plugin e
 - Imported paths: `plugins/build-ios-apps` and `plugins/build-macos-apps`
 - Source snapshot used for this revision: `openai/plugins@202e9242b1084e30d44cea8f553c2bdb5dcc75c9`
 - Source plugin manifests declare `license: MIT` and `author: OpenAI`.
+- iOS and macOS plugin work credited to Thomas Ricouard (Dimillian): https://github.com/Dimillian, https://x.com/Dimillian.
 
 Only OpenAI-sourced Apple skill content belongs in this repo unless a future workflow decision explicitly changes the source policy.
 

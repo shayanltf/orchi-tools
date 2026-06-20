@@ -13,10 +13,11 @@ Use when checking what was imported.
   - `author.name: OpenAI`
   - `repository: https://github.com/openai/plugins`
   - `license: MIT`
+- iOS/macOS plugin work credited to Thomas Ricouard (Dimillian): https://github.com/Dimillian, https://x.com/Dimillian
 
 ## Copy Decision
 
 - Copy OpenAI Apple-related skill directories.
 - Copy root support files needed by those skills: `.mcp.json`, `commands/`, assets.
-- Attribute OpenAI in README.
+- Attribute OpenAI and Thomas Ricouard (Dimillian) in README.
 - Do not keep researched-but-unused public sources in repo docs.
