@@ -11,7 +11,8 @@ Use when changing plugin structure.
 - Skills live at root `skills/<skill>/SKILL.md`.
 - Claude: components must stay at plugin root, not inside `.claude-plugin/`.
 - Claude install path: marketplace add -> plugin install -> `/apple-skills:<skill>`.
-- Codex: skill directory needs `SKILL.md`; optional `references/`, `scripts/`, `assets/`, `agents/openai.yaml`.
+- Codex: skill directory needs `SKILL.md`; optional `references/`, `scripts/`, `assets/`.
+- Every skill ships `agents/openai.yaml` so it renders consistently in the Codex plugin directory. Claude ignores this file; Codex reads it for the skill card and invocation policy. Add `icon_small`/`icon_large`/`brand_color`/`policy` only when the source ships icon assets.
 - Codex install path: add marketplace -> install/enable `Apple Skills` in Codex plugin directory.
 - Keep Claude and Codex runtime notes in `claude/` and `codex/`.
 - Do not create `CLAUDE.md` or `CODEX.md`.

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Xcode Build Fixer"
+  short_description: "Apply approved Xcode build fixes"
+  default_prompt: "Use $xcode-build-fixer to implement approved Xcode build optimizations and re-benchmark."
