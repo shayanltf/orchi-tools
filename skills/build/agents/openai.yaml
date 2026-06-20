@@ -1,0 +1,4 @@
+interface:
+  display_name: "Build"
+  short_description: "Build, run, debug, and test Apple projects"
+  default_prompt: "Use $build to discover, build, run, debug, or test this Apple project."

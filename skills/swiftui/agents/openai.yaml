@@ -1,0 +1,4 @@
+interface:
+  display_name: "SwiftUI"
+  short_description: "Apply grouped SwiftUI workflows"
+  default_prompt: "Use $swiftui to build, refactor, or review SwiftUI UI for this Apple project."
