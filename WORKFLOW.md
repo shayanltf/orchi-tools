@@ -1,50 +1,69 @@
 # Workflow
 
-Use this file when importing sources, grouping skills, packaging a runtime, or preparing a release. The practices are runtime-agnostic; apply them to every harness this repo serves.
+Use this file when importing sources, grouping skills, packaging a runtime, or preparing a release. The practices are runtime-agnostic; apply them to every plugin this marketplace serves.
 
 ## Source Policy
 
-- Import skill content only from approved public sources. The current copied source is OpenAI's official plugin examples at `https://github.com/openai/plugins` (`plugins/build-ios-apps`, `plugins/build-macos-apps`).
-- The reserved `web` catalog entry does not copy web skill content into this repository.
-- Record the source repo, snapshot SHA, and imported paths in `research/`.
+- Import skill content only from approved public sources. The current copied source is OpenAI's official plugin examples at `https://github.com/openai/plugins`.
+- Record the source repo, snapshot SHA, and imported paths in `research/`. A plugin may also keep scoped source notes under `plugins/<plugin-name>/research/`.
 - Attribute the source in `README.md` and `research/`.
 - Do not import from proprietary, unavailable, personal, or unapproved sources, and do not keep references to sources that are researched but not copied.
+- The current active copied sources are:
+  - Apple: `plugins/build-ios-apps` and `plugins/build-macos-apps`.
+  - Web: `plugins/build-web-apps/skills/frontend-app-builder`, `plugins/build-web-apps/skills/frontend-testing-debugging`, `plugins/build-web-apps/skills/react-best-practices`, and `plugins/build-web-apps/skills/shadcn-best-practices`.
+- The Web plugin excludes `stripe-best-practices`, `supabase-postgres-best-practices`, and `build-web-data-visualization`.
+
+## Marketplace And Plugin Scope
+
+- `orchi-tools` is a marketplace repository. Each plugin owns one scoped root at `plugins/<plugin-name>/`.
+- Active plugins:
+  - `apple` - Apple ecosystem skills for Codex and Claude Code.
+  - `web` - Frontend web skills for Codex and Claude Code.
+- Keep plugin work inside that plugin's root unless the change is marketplace-wide documentation, catalog metadata, or release coordination.
+- Do not place one plugin's skills, runtime files, assets, or support commands under another plugin's root.
+- Do not prefix skill folder names with the plugin name.
 
 ## Naming And Grouping
 
-- One active plugin, named `apple`. Skills group by purpose so users reach them as `apple:<group>` (for example `apple:swiftui`, `apple:macos`).
-- The `web` plugin name is reserved in the Codex catalog only while its source repo is absent; do not add `web` skills to this root plugin.
-- Group by user workflow, not by source branding: `swiftui`, `ios`, `macos`, `build`, `performance`.
-- Each group is one first-class skill, not a container of nested old skills.
-- Do not prefix skill folder names with the plugin name.
+- Group by user workflow, not by source branding, unless a source skill must remain exact.
+- Apple groups related OpenAI iOS and macOS source skills into first-class purpose skills: `swiftui`, `ios`, `macos`, `build`, and `performance`.
+- Web keeps the four approved OpenAI source skill surfaces distinct: `frontend-app-builder`, `frontend-testing-debugging`, `react-best-practices`, and `shadcn-best-practices` with source frontmatter preserved.
+- A grouped plugin may compose a `SKILL.md` from approved source guidance. An exact-copy plugin must preserve the source skill directory content and only add packaging files around it.
 
 ## Skill Authoring
 
-- `SKILL.md` is the skill, not an index. Its YAML frontmatter (`name`, `description`) controls when the harness loads it; its body is a real working skill — domain overview, "use when" guidance, and a merged decision/workflow across the group's sub-areas.
-- Lay content directly in the skill: `SKILL.md` at the skill root, detail in flat, topic-named files under `references/`, executables under `scripts/`. Do not create inert wrapper files (no `source.md`) and do not nest old skills under `references/modules/`.
-- Preserve imported content when moving it into a group: relocate reference and script files verbatim; the only allowed edits are fixing broken relative paths. Compose the `SKILL.md` body by faithfully merging the source guidance — do not invent facts.
+- `SKILL.md` is the skill, not an index. Its YAML frontmatter (`name`, `description`) controls when the harness loads it; its body is a real working skill.
+- Lay content directly in the skill: `SKILL.md` at the skill root, detail in flat, topic-named files under `references/`, executables under `scripts/`.
+- Preserve imported content according to that plugin's import mode:
+  - For grouped imports, relocate reference and script files verbatim; the only allowed edits are fixing broken relative paths. Compose the `SKILL.md` body by faithfully merging the source guidance.
+  - For exact-copy imports, copy the source skill directory exactly and do not rewrite, summarize, blend, or blind-merge the skill content.
 - Reference supporting files from `SKILL.md` so the harness knows what each holds and when to load it. Keep all referenced paths inside the skill folder; route cross-skill needs by skill name, not by reaching into another skill's files.
-- Add only the runtime-specific metadata each harness requires (for example Codex `agents/openai.yaml`), and keep it out of the other harness's tree.
+- Add only the runtime-specific metadata each harness requires. Codex keeps `agents/openai.yaml`; Claude runtime trees omit Codex-only `agents/openai.yaml`.
 
 ## Runtime Layout
 
-Each runtime keeps its skills in its own folder. Never share one skill tree across runtimes.
+Each plugin keeps each runtime in that plugin's scoped root. Never share one skill tree across runtimes.
 
-- A runtime whose validator requires skills at the repository root uses root `skills/` (currently Codex, via `.codex-plugin/plugin.json`).
-- A second runtime uses its own subdirectory and a subdirectory-scoped install source so its plugin root is that subdirectory (currently Claude, via `claude/` and a `git-subdir` marketplace source). This isolates it from the root `skills/` tree.
-- Keep each runtime's manifest with its plugin root and its marketplace catalog where that runtime expects it.
-- Keep per-runtime notes in the runtime's folder (`claude/`, `codex/`).
+- Codex plugin root: `plugins/<plugin-name>/`.
+- Codex manifest: `plugins/<plugin-name>/.codex-plugin/plugin.json`.
+- Codex skills: `plugins/<plugin-name>/skills/`.
+- Claude plugin root: `plugins/<plugin-name>/claude/`.
+- Claude manifest: `plugins/<plugin-name>/claude/.claude-plugin/plugin.json`.
+- Claude skills: `plugins/<plugin-name>/claude/skills/`.
+- Codex marketplace catalog: `.agents/plugins/marketplace.json`, with each entry using `source.path: ./plugins/<plugin-name>`.
+- Claude marketplace catalog: `.claude-plugin/marketplace.json`, with each entry using `git-subdir` and `path: plugins/<plugin-name>/claude`.
+- Keep per-runtime notes in that runtime's folder, for example `plugins/apple/codex/` and `plugins/apple/claude/`.
 
 ## Community Skill Adaptation
 
 Follow this process whenever you adopt or adapt a skill from the community.
 
 1. Vet the source. Confirm the license permits reuse and the source is approved (see Source Policy). Record the source, snapshot, and paths in `research/`; attribute it in `README.md`.
-2. Decide the group. Map the community skill to one purpose group by what the user does with it, not by its original name or branding.
-3. Adapt it as a first-class skill (see Skill Authoring). Merge the community content into the group's `SKILL.md` and flat topic references. Do not keep it as a nested archive of the original skill and do not add inert wrapper files. Relocate reference and script content verbatim; fix only broken paths.
-4. Duplicate per runtime. Each runtime gets its own copy under its own tree (see Runtime Layout). Identical content across runtimes is expected and acceptable — the separation is required because each platform has its own layout and validator rules. Never point two runtimes at one shared root skill tree.
-5. Strip personal and source-specific noise: private names, local paths, and references to sources researched but not copied.
-6. Verify per runtime: run each runtime's validator or structure check, confirm `SKILL.md` frontmatter, confirm every referenced path resolves inside the skill, and confirm no inert `source.md` or `references/modules/` artifacts remain.
+2. Decide the plugin. Use an existing `plugins/<plugin-name>/` root when the source belongs to that plugin's scope. Create a new plugin root when it is a distinct product surface.
+3. Decide the import mode. Use grouped adaptation only when the plugin's approved structure calls for it. Use exact-copy import when the source skill must stay distinct.
+4. Duplicate per runtime. Each runtime gets its own copy under its own tree (see Runtime Layout). Identical content across runtimes is expected and acceptable because each platform has its own layout and validator rules.
+5. Strip personal and source-specific noise only when adaptation mode allows it. Do not alter exact-copy skill content except where layout validation requires a structural wrapper.
+6. Verify per runtime: run each runtime's validator or structure check, confirm `SKILL.md` frontmatter, confirm every referenced path resolves inside the skill, and confirm runtime-only files stay in the right runtime tree.
 
 ## Docs Directory
 
@@ -75,7 +94,7 @@ Apply to `README.md`, `WORKFLOW.md`, `CLAUDE.md`, docs, and skill-facing instruc
 
 ## Release
 
-- Active plugin name `apple`; first release tag `v0.1.0`.
-- Reserved catalog names such as `web` are not releaseable plugins until their source repo exists and validates.
+- Active plugin names: `apple`, `web`.
+- First release tag: `v0.1.0`.
 - A release tag points at the reviewed release commit.
 - Set a plugin's `version` in one place per runtime to avoid conflicting update signals.

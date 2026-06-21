@@ -12,7 +12,7 @@
       "source": {
         "source": "git-subdir",
         "url": "shayanltf/orchi-tools",
-        "path": "claude"
+        "path": "plugins/apple/claude"
       },
       "author": {
         "name": "Orchi Team"
@@ -27,6 +27,30 @@
         "swiftui",
         "appkit",
         "xcode",
+        "skills"
+      ]
+    },
+    {
+      "name": "web",
+      "displayName": "Web",
+      "description": "OpenAI-sourced Web frontend skills for Claude Code, scoped to frontend app building, frontend QA, React/Next.js, and shadcn/ui.",
+      "source": {
+        "source": "git-subdir",
+        "url": "shayanltf/orchi-tools",
+        "path": "plugins/web/claude"
+      },
+      "author": {
+        "name": "Orchi Team"
+      },
+      "license": "MIT",
+      "category": "Developer Tools",
+      "tags": [
+        "web",
+        "frontend",
+        "react",
+        "nextjs",
+        "shadcn",
+        "browser-testing",
         "skills"
       ]
     }

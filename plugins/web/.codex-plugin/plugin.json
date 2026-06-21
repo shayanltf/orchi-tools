@@ -1,0 +1,44 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "description": "Web frontend skills for Codex, sourced from selected OpenAI Build Web Apps skill directories.",
+  "author": {
+    "name": "Orchi Team"
+  },
+  "homepage": "https://github.com/shayanltf/orchi-tools",
+  "repository": "https://github.com/shayanltf/orchi-tools",
+  "license": "MIT",
+  "keywords": [
+    "web",
+    "frontend",
+    "react",
+    "nextjs",
+    "shadcn",
+    "browser-testing",
+    "frontend-debugging",
+    "skills",
+    "plugins"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Web",
+    "shortDescription": "Frontend app, React, shadcn/ui, and browser QA skills.",
+    "longDescription": "Web groups selected OpenAI Build Web Apps skill surfaces into a scoped plugin for frontend app building, frontend testing and debugging, React and Next.js performance guidance, and shadcn/ui component workflows.",
+    "developerName": "Orchi Team",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Context",
+      "Skills",
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use $frontend-app-builder to build a polished frontend.",
+      "Use $frontend-testing-debugging to verify this UI.",
+      "Use $shadcn to work with shadcn/ui components."
+    ],
+    "brandColor": "#111111",
+    "websiteURL": "https://github.com/shayanltf/orchi-tools"
+  }
+}

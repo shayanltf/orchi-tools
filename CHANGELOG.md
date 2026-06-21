@@ -2,8 +2,12 @@
 
 ## Unreleased
 
-- Reserved the future `web` plugin in the Codex marketplace with `installation: NOT_AVAILABLE`.
-- Documented that `web` remains catalog-only until the planned source repository exists; no web skill content is copied in this change.
+- Re-scoped `orchi-tools` as a marketplace repository with independent plugin roots under `plugins/<plugin-name>/`.
+- Moved the Apple plugin runtime files under `plugins/apple/` and updated marketplace entries to target that scoped plugin root.
+- Added the Web plugin under `plugins/web/` for Codex and Claude Code.
+- Copied the four approved OpenAI Build Web Apps skill directories into the Web plugin: `frontend-app-builder`, `frontend-testing-debugging`, `react-best-practices`, and `shadcn-best-practices`.
+- Excluded Stripe, Supabase/Postgres, and web data visualization source content from the Web plugin.
+- Updated Codex and Claude marketplace catalogs to publish both `apple` and `web` as available plugins.
 
 ## [0.1.0] - 2026-06-20
 
