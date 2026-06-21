@@ -62,6 +62,22 @@ Invoke the grouped skills by namespace:
 /web:shadcn
 ```
 
+### Troubleshooting
+
+If `marketplace add` fails with `URL rejected: Malformed input to a URL function`, the marketplace identifier is mistyped. The CLI builds a clone URL from the identifier you pass, so an extra word or a stray space (for example `add shayanltf/orchi-tools`) becomes an invalid URL such as `https://github.com/add shayanltf/orchi-tools.git`.
+
+Pass the identifier exactly, with no extra words:
+
+```bash
+claude plugin marketplace add shayanltf/orchi-tools
+```
+
+Or pass the full repository URL:
+
+```bash
+claude plugin marketplace add https://github.com/shayanltf/orchi-tools
+```
+
 ## Skill Library
 
 ### Apple
