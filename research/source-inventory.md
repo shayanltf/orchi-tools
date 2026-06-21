@@ -21,3 +21,9 @@ Use when checking what was imported.
 - Copy root support files needed by those skills: `.mcp.json`, `commands/`, assets.
 - Attribute OpenAI and Thomas Ricouard (Dimillian) in README.
 - Do not keep researched-but-unused public sources in repo docs.
+
+## Catalog-Only Entries
+
+- `web` is reserved in the Codex marketplace with `installation: NOT_AVAILABLE`.
+- No `web` source content is copied into this repository.
+- Do not add `web` source attribution here until source files are actually imported into a plugin repository.

@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased
+
+- Reserved the future `web` plugin in the Codex marketplace with `installation: NOT_AVAILABLE`.
+- Documented that `web` remains catalog-only until the planned source repository exists; no web skill content is copied in this change.
+
 ## [0.1.0] - 2026-06-20
 
 - Added Apple Skills plugin manifests for Claude Code and Codex.

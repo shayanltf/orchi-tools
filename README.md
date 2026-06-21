@@ -1,8 +1,13 @@
-# Apple
+# Orchi Tools
 
-Apple is an Orchi Tools plugin package for Apple ecosystem work in agent harnesses.
+Orchi Tools is a plugin marketplace for agent harnesses.
 
 Maintained by the Orchi Team, with source published from `shayanltf/orchi-tools`.
+
+## Catalog
+
+- `apple` - available. Apple ecosystem skills for Codex and Claude Code.
+- `web` - reserved, not installable yet. The Codex catalog points at the planned `shayanltf/orchi-web-tools` plugin source with `installation: NOT_AVAILABLE`; the source repository has not been created in this catalog-only change.
 
 ## Install
 
@@ -15,6 +20,8 @@ codex plugin marketplace add shayanltf/orchi-tools
 ```
 
 Open the Codex app plugin directory, choose the `Orchi Tools` marketplace, then install or enable `Apple`.
+
+The `web` entry is intentionally unavailable until `shayanltf/orchi-web-tools` exists and ships the plugin root.
 
 Use the grouped Codex skills:
 
@@ -32,6 +39,8 @@ Use $performance to investigate this memory growth.
 claude plugin marketplace add shayanltf/orchi-tools
 claude plugin install apple@orchi-tools
 ```
+
+Claude Code currently exposes only `apple`; no Claude `web` entry is published until the web plugin source exists.
 
 Invoke the grouped skills by namespace:
 
@@ -51,9 +60,9 @@ Invoke the grouped skills by namespace:
 - `build` - Xcode and SwiftPM build, run, debug, and test triage workflows.
 - `performance` - ETTrace profiling, memgraph leaks, SwiftUI performance audits, and telemetry.
 
-## Runtime Layout
+## Apple Runtime Layout
 
-Each runtime keeps its skills in its own folder:
+Each Apple runtime keeps its skills in its own folder:
 
 - `skills/` contains the Codex grouped skill surface. Codex requires this root path in `.codex-plugin/plugin.json`.
 - `claude/skills/` contains the Claude grouped skill surface. The Claude marketplace entry uses a `git-subdir` source pointing at `claude/`, so Claude loads only this folder and never the Codex root `skills/`.
@@ -61,7 +70,7 @@ Each runtime keeps its skills in its own folder:
 - `codex/` and `claude/` contain Codex and Claude runtime notes.
 - `.mcp.json` configures XcodeBuildMCP-backed iOS simulator workflows for Codex.
 
-## Source Attribution
+## Apple Source Attribution
 
 Apple imports Apple-related skill content from OpenAI's official plugin examples:
 
@@ -71,7 +80,7 @@ Apple imports Apple-related skill content from OpenAI's official plugin examples
 - Source plugin manifests declare `license: MIT` and `author: OpenAI`.
 - iOS and macOS plugin work is credited to Thomas Ricouard (Dimillian): https://github.com/Dimillian, https://x.com/Dimillian.
 
-Only OpenAI-sourced Apple skill content belongs in this repo unless a future workflow decision explicitly changes the source policy.
+Only OpenAI-sourced Apple skill content belongs in this repo unless a future workflow decision explicitly changes the source policy. The reserved `web` catalog entry does not copy web skill content into this repository.
 
 ## Local Development
 

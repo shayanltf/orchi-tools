@@ -5,6 +5,7 @@ Use before adding, renaming, or removing skills.
 - Current copied source allowlist: `https://github.com/openai/plugins`.
 - Current source paths: `plugins/build-ios-apps`, `plugins/build-macos-apps`.
 - Import Apple-related skill directories only.
+- The reserved `web` catalog entry does not authorize copying web skill content into this repository.
 - Preserve `SKILL.md`, `references/`, `scripts/`, and `agents/openai.yaml`.
 - Preserve supporting root files when skills require them: `.mcp.json`, `commands/`, assets.
 - Keep skill folder names purpose-scoped.

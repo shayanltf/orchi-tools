@@ -4,14 +4,16 @@ Use this file when importing sources, grouping skills, packaging a runtime, or p
 
 ## Source Policy
 
-- Import skill content only from approved public sources. The current allowed source is OpenAI's official plugin examples at `https://github.com/openai/plugins` (`plugins/build-ios-apps`, `plugins/build-macos-apps`).
+- Import skill content only from approved public sources. The current copied source is OpenAI's official plugin examples at `https://github.com/openai/plugins` (`plugins/build-ios-apps`, `plugins/build-macos-apps`).
+- The reserved `web` catalog entry does not copy web skill content into this repository.
 - Record the source repo, snapshot SHA, and imported paths in `research/`.
 - Attribute the source in `README.md` and `research/`.
 - Do not import from proprietary, unavailable, personal, or unapproved sources, and do not keep references to sources that are researched but not copied.
 
 ## Naming And Grouping
 
-- One plugin, named `apple`. Skills group by purpose so users reach them as `apple:<group>` (for example `apple:swiftui`, `apple:macos`).
+- One active plugin, named `apple`. Skills group by purpose so users reach them as `apple:<group>` (for example `apple:swiftui`, `apple:macos`).
+- The `web` plugin name is reserved in the Codex catalog only while its source repo is absent; do not add `web` skills to this root plugin.
 - Group by user workflow, not by source branding: `swiftui`, `ios`, `macos`, `build`, `performance`.
 - Each group is one first-class skill, not a container of nested old skills.
 - Do not prefix skill folder names with the plugin name.
@@ -73,6 +75,7 @@ Apply to `README.md`, `WORKFLOW.md`, `CLAUDE.md`, docs, and skill-facing instruc
 
 ## Release
 
-- Plugin name `apple`; first release tag `v0.1.0`.
+- Active plugin name `apple`; first release tag `v0.1.0`.
+- Reserved catalog names such as `web` are not releaseable plugins until their source repo exists and validates.
 - A release tag points at the reviewed release commit.
 - Set a plugin's `version` in one place per runtime to avoid conflicting update signals.
