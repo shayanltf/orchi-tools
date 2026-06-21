@@ -8,6 +8,8 @@
 - Copied the four approved OpenAI Build Web Apps skill directories into the Web plugin: `frontend-app-builder`, `frontend-testing-debugging`, `react-best-practices`, and `shadcn-best-practices`.
 - Excluded Stripe, Supabase/Postgres, and web data visualization source content from the Web plugin.
 - Updated Codex and Claude marketplace catalogs to publish both `apple` and `web` as available plugins.
+- Aligned Codex plugin manifests with the official OpenAI plugin format: trimmed `interface.capabilities` to the supported `Interactive`, `Read`, and `Write` values, added top-level `homepage` and `repository` to the Apple manifest, and set `policy.products` to `["CODEX"]` in the Codex marketplace catalog.
+- Added an install Troubleshooting note to `README.md` explaining the `URL rejected: Malformed input to a URL function` error and the exact `marketplace add` identifier to pass.
 
 ## [0.1.0] - 2026-06-20
 

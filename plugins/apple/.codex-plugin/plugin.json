@@ -5,6 +5,8 @@
   "author": {
     "name": "Orchi Team"
   },
+  "homepage": "https://github.com/shayanltf/orchi-tools",
+  "repository": "https://github.com/shayanltf/orchi-tools",
   "license": "MIT",
   "keywords": [
     "apple",
@@ -27,8 +29,6 @@
     "developerName": "Orchi Team",
     "category": "Productivity",
     "capabilities": [
-      "Context",
-      "Skills",
       "Interactive",
       "Read",
       "Write"

@@ -27,8 +27,6 @@
     "developerName": "Orchi Team",
     "category": "Developer Tools",
     "capabilities": [
-      "Context",
-      "Skills",
       "Interactive",
       "Read",
       "Write"
