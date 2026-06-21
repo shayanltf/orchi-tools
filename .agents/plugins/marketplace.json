@@ -7,14 +7,26 @@
     {
       "name": "apple",
       "source": {
-        "source": "url",
-        "url": "https://github.com/shayanltf/orchi-tools.git"
+        "source": "local",
+        "path": "./plugins/apple"
       },
       "policy": {
         "installation": "AVAILABLE",
         "authentication": "ON_INSTALL"
       },
       "category": "Productivity"
+    },
+    {
+      "name": "web",
+      "source": {
+        "source": "local",
+        "path": "./plugins/web"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
     }
   ]
 }

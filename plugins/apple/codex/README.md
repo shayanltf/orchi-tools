@@ -1,4 +1,4 @@
-# Codex Runtime
+# Apple Codex Runtime
 
 Codex installs the Apple plugin through the `orchi-tools` marketplace. The Codex plugin name is `apple`.
 
@@ -8,10 +8,10 @@ codex plugin marketplace add shayanltf/orchi-tools
 
 Open the Codex app plugin directory, choose the `Orchi Tools` marketplace, then install or enable `Apple`.
 
-Codex reads `.codex-plugin/plugin.json`. The manifest points at the validator-compatible grouped skill directory:
+Codex reads `plugins/apple/.codex-plugin/plugin.json`. The manifest points at the plugin-scoped grouped skill directory:
 
 ```text
-skills/
+plugins/apple/skills/
 ```
 
 Use these grouped skills from the Apple plugin:
@@ -32,4 +32,4 @@ Use $build to triage this SwiftPM test failure.
 Use $performance to investigate this memory growth.
 ```
 
-Codex loads `.mcp.json` for XcodeBuildMCP-backed iOS simulator workflows.
+Codex loads `plugins/apple/.mcp.json` for XcodeBuildMCP-backed iOS simulator workflows.

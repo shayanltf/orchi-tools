@@ -1,0 +1,22 @@
+{
+  "name": "web",
+  "displayName": "Web",
+  "version": "0.1.0",
+  "description": "Web frontend skills for Claude Code, sourced from selected OpenAI Build Web Apps skill directories.",
+  "author": {
+    "name": "Orchi Team"
+  },
+  "license": "MIT",
+  "keywords": [
+    "web",
+    "frontend",
+    "react",
+    "nextjs",
+    "shadcn",
+    "browser-testing",
+    "frontend-debugging",
+    "claude-code",
+    "skills",
+    "plugins"
+  ]
+}
